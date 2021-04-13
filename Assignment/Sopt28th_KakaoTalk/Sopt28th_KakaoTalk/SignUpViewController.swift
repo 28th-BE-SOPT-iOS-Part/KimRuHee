@@ -18,6 +18,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var pwView: UIView!
     @IBOutlet weak var checkPwView: UIView!
     
+    @IBOutlet weak var accountButton: UIButton!
+    
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -26,6 +28,8 @@ class SignUpViewController: UIViewController {
         emailTextField.placeholder = "이메일 또는 전화번호"
         pwTextfield.placeholder = "비밀번호"
         checkPwTextField.placeholder = "비밀번호 확인"
+        
+        accountButton.layer.cornerRadius = 5
     }
     
     //MARK: - Helpers
@@ -55,8 +59,9 @@ class SignUpViewController: UIViewController {
             nextVC.modalPresentationStyle = .fullScreen
             nextVC.comment = emailTextField.text
             
-            self.present(nextVC, animated: true, completion: nil)
-            self.navigationController?.popViewController(animated: true)
+            self.present(nextVC, animated: true) {
+                self.navigationController?.popViewController(animated: true)
+            }
         } else {
             return
         }

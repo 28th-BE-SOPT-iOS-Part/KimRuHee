@@ -13,6 +13,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var accountButton: UIButton!
     
     //MARK: - Lifecycle
     
@@ -20,6 +22,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         emailTextField.placeholder = "이메일 또는 전화번호"
         pwTextField.placeholder = "비밀번호"
+        
+        loginButton.layer.cornerRadius = 5
+        accountButton.layer.cornerRadius = 5
     }
 
     //MARK: - Helpers

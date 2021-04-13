@@ -44,7 +44,7 @@
 		BB777691261AD86A0087AB5F = {
 			isa = PBXGroup;
 			children = (
-				BB77769C261AD86A0087AB5F /* Sopt28th_1st_Assignment */,
+				BB77769C261AD86A0087AB5F /* Sopt28th_KakaoTalk */,
 				BB77769B261AD86A0087AB5F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,7 +57,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BB77769C261AD86A0087AB5F /* Sopt28th_1st_Assignment */ = {
+		BB77769C261AD86A0087AB5F /* Sopt28th_KakaoTalk */ = {
 			isa = PBXGroup;
 			children = (
 				BB77769D261AD86A0087AB5F /* AppDelegate.swift */,
@@ -70,7 +70,7 @@
 				BB7776A8261AD86E0087AB5F /* LaunchScreen.storyboard */,
 				BB7776AB261AD86E0087AB5F /* Info.plist */,
 			);
-			path = Sopt28th_1st_Assignment;
+			path = Sopt28th_KakaoTalk;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,7 +107,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BB777695261AD86A0087AB5F /* Build configuration list for PBXProject "Sopt28th_KAKAO_CLONE" */;
+			buildConfigurationList = BB777695261AD86A0087AB5F /* Build configuration list for PBXProject "Sopt28th_KakaoTalk" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -296,12 +296,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
-				INFOPLIST_FILE = Sopt28th_1st_Assignment/Info.plist;
+				INFOPLIST_FILE = Sopt28th_KakaoTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ruheekim.Sopt28th-1st-Assignment";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruheekim.Sopt28th_KakaoTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -315,12 +315,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
-				INFOPLIST_FILE = Sopt28th_1st_Assignment/Info.plist;
+				INFOPLIST_FILE = Sopt28th_KakaoTalk/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ruheekim.Sopt28th-1st-Assignment";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ruheekim.Sopt28th_KakaoTalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -330,7 +330,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB777695261AD86A0087AB5F /* Build configuration list for PBXProject "Sopt28th_KAKAO_CLONE" */ = {
+		BB777695261AD86A0087AB5F /* Build configuration list for PBXProject "Sopt28th_KakaoTalk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BB7776AC261AD86E0087AB5F /* Debug */,

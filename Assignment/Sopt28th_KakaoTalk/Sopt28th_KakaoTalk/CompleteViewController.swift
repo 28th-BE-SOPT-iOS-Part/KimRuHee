@@ -12,6 +12,7 @@ class CompleteViewController: UIViewController {
     //MARK: - Properties
     
     @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var checkButton: UIButton!
     
     var comment : String?
     
@@ -19,6 +20,7 @@ class CompleteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkButton.layer.cornerRadius = 5
         setLabel()
         
     }

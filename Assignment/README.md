@@ -1,7 +1,5 @@
 # RUHEE KIM REPO 🚀🚀🚀
 
-![표지_김루희](https://user-images.githubusercontent.com/60260284/113490309-2cdcae80-9504-11eb-8ebb-a158e2324b72.png)
-
 <br>
 
 ### 📚 iOS 파트 커리큘럼
