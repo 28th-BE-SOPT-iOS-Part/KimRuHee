@@ -59,8 +59,10 @@ class SignUpViewController: UIViewController {
             nextVC.modalPresentationStyle = .fullScreen
             nextVC.comment = emailTextField.text
             
+            self.present(nextVC, animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
             self.present(nextVC, animated: true) {
-                self.navigationController?.popViewController(animated: true)
+                <#code#>
             }
         } else {
             return
