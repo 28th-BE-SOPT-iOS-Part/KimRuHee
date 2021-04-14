@@ -34,7 +34,9 @@ class CompleteViewController: UIViewController {
     }
     
     @IBAction func checkButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        guard let nextVC = storyboard?.instantiateViewController(identifier: "FriendViewController") as? FriendViewController else { return }
+        
+        self.present(nextVC, animated: true, completion: nil)
     }
     
 }

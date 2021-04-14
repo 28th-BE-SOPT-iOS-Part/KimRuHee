@@ -53,19 +53,17 @@ class SignUpViewController: UIViewController {
             pwView.backgroundColor = .systemGray4
             checkPwView.backgroundColor = .systemGray4
             
-            guard let nextVC = self.storyboard?.instantiateViewController(identifier: "CompleteViewController")
-                    as? CompleteViewController else { return }
+            guard let nextVC = self.storyboard?.instantiateViewController(identifier: "FriendViewController")
+                    as? FriendViewController else { return }
             
             nextVC.modalPresentationStyle = .fullScreen
-            nextVC.comment = emailTextField.text
+//            nextVC.comment = emailTextField.text
             
-            self.present(nextVC, animated: true, completion: nil)
-            self.navigationController?.popViewController(animated: true)
             self.present(nextVC, animated: true) {
-                <#code#>
+                self.navigationController?.popViewController(animated: true)
             }
         } else {
             return
         }
-    }
+    }  
 }

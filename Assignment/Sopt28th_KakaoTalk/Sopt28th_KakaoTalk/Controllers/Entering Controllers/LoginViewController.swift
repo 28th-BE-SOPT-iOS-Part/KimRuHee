@@ -32,13 +32,13 @@ class LoginViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         
         if emailTextField.hasText == true && pwTextField.hasText == true {
-            guard let nextVC = self.storyboard?.instantiateViewController(identifier: "CompleteViewController")
-                    as? CompleteViewController else { return }
+            guard let nextVC = self.storyboard?.instantiateViewController(identifier: "FriendViewController")
+                    as? FriendViewController else { return }
             
-            nextVC.modalPresentationStyle = .fullScreen
-            nextVC.comment = emailTextField.text
+//            nextVC.modalPresentationStyle = .fullScreen
+//            nextVC.comment = emailTextField.text
                 
-            self.present(nextVC, animated: true, completion: nil)
+            self.navigationController?.pushViewController(nextVC, animated: true)
             
         } else {
             return
