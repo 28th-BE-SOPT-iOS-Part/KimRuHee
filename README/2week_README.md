@@ -31,6 +31,7 @@
 
 1. **Modal 쓸어서 Dismiss**
 <br>
+
 : 설명 쓰기 -> 아직...
 
     ``` ? ```
@@ -63,10 +64,12 @@ self.navigationController?.pushViewController(nextVC, animated: true)
 
 ```
 
-📖 ```let storyboard = UIStoryboard(name: "Main", bundle: nil)``` <br>  이 부분은 나는 MainTabBarController를 Main.storyboard 파일에 만들어줬기 때문에 굳이 안써도 작동은 하지만 만약 새로운 storyboard 파일로 분리해줬다면 꼭 선언해서 어떤 스토리보드인지 알려줘야 한다.
+📖 ```let storyboard = UIStoryboard(name: "Main", bundle: nil)``` <br><br>  이 부분은 나는 MainTabBarController를 Main.storyboard 파일에 만들어줬기 때문에 굳이 안써도 작동은 하지만 만약 새로운 storyboard 파일로 분리해줬다면 꼭 선언해서 어떤 스토리보드인지 알려줘야 한다.
 
 <br> 
+
   - 두 번째 해결 방법 : 그냥 UITabBarController 자체를 코드로 구현
+  
 ```
 // 탭바 컨트롤러 코드 구현한 부분
 
