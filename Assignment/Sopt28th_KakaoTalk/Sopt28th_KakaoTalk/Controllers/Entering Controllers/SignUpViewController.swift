@@ -53,12 +53,7 @@ class SignUpViewController: UIViewController {
             pwView.backgroundColor = .systemGray4
             checkPwView.backgroundColor = .systemGray4
             
-//            guard let nextVC = self.storyboard?.instantiateViewController(identifier: "FriendViewController")
-//                    as? FriendViewController else { return }
-//
-//            self.navigationController?.pushViewController(nextVC, animated: true)
-            
-            // 탭바 스토리보드로 연결했더니 안 떠서 우선,, 코드로 해봄..
+            // 탭바 컨트롤러 코드 구현한 부분
             guard let first = storyboard?.instantiateViewController(withIdentifier: "FriendViewController") as? FriendViewController else { return }
             guard let second = storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController else { return }
             guard let third = storyboard?.instantiateViewController(withIdentifier: "TagViewController") as? TagViewController else { return }

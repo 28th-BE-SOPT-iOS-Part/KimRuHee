@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB341EC92628973E00BF274D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB341EC82628973E00BF274D /* MainTabBarController.swift */; };
 		BB35E8792626E8790086DE5D /* FirstTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB35E8782626E8790086DE5D /* FirstTab.storyboard */; };
 		BB35E87C2626E8810086DE5D /* SecondTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB35E87B2626E8810086DE5D /* SecondTab.storyboard */; };
 		BB35E87F2626E8880086DE5D /* ThirdTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB35E87E2626E8880086DE5D /* ThirdTab.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB341EC82628973E00BF274D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		BB35E8782626E8790086DE5D /* FirstTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstTab.storyboard; sourceTree = "<group>"; };
 		BB35E87B2626E8810086DE5D /* SecondTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondTab.storyboard; sourceTree = "<group>"; };
 		BB35E87E2626E8880086DE5D /* ThirdTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ThirdTab.storyboard; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		BB35E89D2626EC9E0086DE5D /* TabBar Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB341EC82628973E00BF274D /* MainTabBarController.swift */,
 				BB35E88F2626EAE60086DE5D /* FriendViewController.swift */,
 				BB35E89F2626ECE00086DE5D /* MyProfileViewController.swift */,
 				BB35E88B2626EA310086DE5D /* ChatViewController.swift */,
@@ -215,6 +218,7 @@
 			files = (
 				BB7776A2261AD86A0087AB5F /* LoginViewController.swift in Sources */,
 				BB35E8962626EB0E0086DE5D /* ShoppingViewController.swift in Sources */,
+				BB341EC92628973E00BF274D /* MainTabBarController.swift in Sources */,
 				BB77769E261AD86A0087AB5F /* AppDelegate.swift in Sources */,
 				BB7776B4261AE1920087AB5F /* SignUpViewController.swift in Sources */,
 				BB35E8A02626ECE00086DE5D /* MyProfileViewController.swift in Sources */,

@@ -19,6 +19,7 @@
 <img width="30%" src="https://user-images.githubusercontent.com/63235947/114887906-c9c41380-9e43-11eb-9272-8574c4e72c59.gif"/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
 <br>
+
 ##### 👉🏻 오토레이아웃
 
 <img width="1440" alt="Screen Shot 2021-04-15 at 1 46 23 AM" src="https://user-images.githubusercontent.com/63235947/114748016-6a56fc80-9d8c-11eb-984e-856b9856346d.png">
@@ -30,6 +31,7 @@
 
 1. **Modal 쓸어서 Dismiss**
 <br>
+
 : 설명 쓰기 -> 아직...
 
     ``` ? ```

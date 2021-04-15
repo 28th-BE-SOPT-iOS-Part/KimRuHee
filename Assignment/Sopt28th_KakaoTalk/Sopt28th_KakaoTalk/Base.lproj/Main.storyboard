@@ -359,10 +359,10 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="77.58620689655173"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="sdn-hw-61Z">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SbQ-Fk-xvm" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="SbQ-Fk-xvm" customClass="MainTabBarController" customModule="Sopt28th_1st_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cMV-Oh-fvH">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

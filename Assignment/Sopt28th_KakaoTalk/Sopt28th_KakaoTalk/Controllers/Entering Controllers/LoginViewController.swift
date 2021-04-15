@@ -32,20 +32,12 @@ class LoginViewController: UIViewController {
     @IBAction func loginButton(_ sender: Any) {
         // 로그인 버튼 누를 경우 홈화면(카톡 친구 목록 창)으로 이동
         if emailTextField.hasText == true && pwTextField.hasText == true {
-//            guard let nextVC = self.storyboard?.instantiateViewController(identifier: "FriendViewController")
-//                    as? FriendViewController else { return }
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let nextVC = storyboard.instantiateViewController(identifier: "MainTabBarController")
+                    as? MainTabBarController else { return }
 
-            // 탭바 스토리보드로 연결했더니 안 떠서 우선,, 코드로 해봄..
-            guard let first = storyboard?.instantiateViewController(withIdentifier: "FriendViewController") as? FriendViewController else { return }
-            guard let second = storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController else { return }
-            guard let third = storyboard?.instantiateViewController(withIdentifier: "TagViewController") as? TagViewController else { return }
-            guard let fourth = storyboard?.instantiateViewController(withIdentifier: "ShoppingViewController") as? ShoppingViewController  else { return }
-            guard let fifth = storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController else { return }
-
-            let tb = UITabBarController()
-            tb.tabBar.tintColor = .black // 선택 시 검정색
-            tb.setViewControllers([first, second, third, fourth, fifth], animated: true)
-            self.navigationController?.pushViewController(tb, animated: true)
+            self.navigationController?.pushViewController(nextVC, animated: true)
             
         } else {
             return
