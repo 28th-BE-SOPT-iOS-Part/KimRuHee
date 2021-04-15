@@ -35,7 +35,7 @@ class SignUpViewController: UIViewController {
     //MARK: - Helpers
     
     @IBAction func newAccountButton(_ sender: Any) {
-        
+        // 새 계정 만들기 버튼 누를 경우 홈화면(카톡 친구 목록 창)으로 이동
         if  pwTextfield.text != checkPwTextField.text {
             
             // 비번 일치하지 않을 경우
@@ -53,15 +53,23 @@ class SignUpViewController: UIViewController {
             pwView.backgroundColor = .systemGray4
             checkPwView.backgroundColor = .systemGray4
             
-            guard let nextVC = self.storyboard?.instantiateViewController(identifier: "FriendViewController")
-                    as? FriendViewController else { return }
+//            guard let nextVC = self.storyboard?.instantiateViewController(identifier: "FriendViewController")
+//                    as? FriendViewController else { return }
+//
+//            self.navigationController?.pushViewController(nextVC, animated: true)
             
-            nextVC.modalPresentationStyle = .fullScreen
-//            nextVC.comment = emailTextField.text
+            // 탭바 스토리보드로 연결했더니 안 떠서 우선,, 코드로 해봄..
+            guard let first = storyboard?.instantiateViewController(withIdentifier: "FriendViewController") as? FriendViewController else { return }
+            guard let second = storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController else { return }
+            guard let third = storyboard?.instantiateViewController(withIdentifier: "TagViewController") as? TagViewController else { return }
+            guard let fourth = storyboard?.instantiateViewController(withIdentifier: "ShoppingViewController") as? ShoppingViewController  else { return }
+            guard let fifth = storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController else { return }
+
+            let tb = UITabBarController()
+            tb.tabBar.tintColor = .black // 선택 시 검정색
+            tb.setViewControllers([first, second, third, fourth, fifth], animated: true)
+            self.navigationController?.pushViewController(tb, animated: true)
             
-            self.present(nextVC, animated: true) {
-                self.navigationController?.popViewController(animated: true)
-            }
         } else {
             return
         }

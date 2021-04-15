@@ -49,6 +49,7 @@ if  pwTextfield.text != checkPwTextField.text {
 
 1. **textField.hasText**
 : 텍스트 필드에 텍스트가 있는지 없는지 확인할 수 있게 해주는 Boolean value
+
     ``` emailTextField.hasText == true && pwTextfield.hasText == true && checkPwTextField.hasText == true ```
 
     

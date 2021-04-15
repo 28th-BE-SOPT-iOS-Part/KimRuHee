@@ -62,24 +62,24 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVH-Ql-6gs">
-                                <rect key="frame" x="158.5" y="514" width="97" height="96"/>
+                                <rect key="frame" x="158.5" y="597.5" width="97" height="96"/>
                                 <state key="normal" image="profileUserImg"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김솝트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sB-vs-XEN">
-                                <rect key="frame" x="183.5" y="618" width="47" height="21.5"/>
+                                <rect key="frame" x="183.5" y="701.5" width="47" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8l-CE-rHA">
-                                <rect key="frame" x="0.0" y="681.5" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="765" width="414" height="1"/>
                                 <color key="backgroundColor" red="0.62352941176470589" green="0.65490196078431373" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="HK5-pv-D3L"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4WK-Qb-Uih">
-                                <rect key="frame" x="63" y="693.5" width="288" height="72"/>
+                                <rect key="frame" x="63" y="777" width="288" height="72"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LIo-bk-HLO">
                                         <rect key="frame" x="0.0" y="0.0" width="96" height="72"/>
@@ -165,11 +165,11 @@
                             <constraint firstItem="B8l-CE-rHA" firstAttribute="top" secondItem="2sB-vs-XEN" secondAttribute="bottom" constant="42" id="CUf-Nz-YJP"/>
                             <constraint firstItem="B8l-CE-rHA" firstAttribute="centerX" secondItem="ldJ-tj-ajh" secondAttribute="centerX" id="DMX-lB-dBZ"/>
                             <constraint firstItem="2sB-vs-XEN" firstAttribute="centerX" secondItem="ldJ-tj-ajh" secondAttribute="centerX" id="FH0-1v-9M6"/>
+                            <constraint firstAttribute="bottom" secondItem="4WK-Qb-Uih" secondAttribute="bottom" constant="47" id="Mp1-QE-ucs"/>
                             <constraint firstItem="2sB-vs-XEN" firstAttribute="top" secondItem="HVH-Ql-6gs" secondAttribute="bottom" constant="8" id="OS3-gn-X4I"/>
                             <constraint firstAttribute="trailing" secondItem="B8l-CE-rHA" secondAttribute="trailing" id="OYN-H7-3ZY"/>
                             <constraint firstItem="HVH-Ql-6gs" firstAttribute="centerX" secondItem="ldJ-tj-ajh" secondAttribute="centerX" id="dON-XS-FHF"/>
                             <constraint firstItem="4WK-Qb-Uih" firstAttribute="centerX" secondItem="ldJ-tj-ajh" secondAttribute="centerX" id="hcs-Gm-etX"/>
-                            <constraint firstItem="HVH-Ql-6gs" firstAttribute="top" secondItem="Ctg-Od-rqQ" secondAttribute="top" constant="470" id="rJf-CQ-ZfL"/>
                             <constraint firstItem="SvQ-9y-AQH" firstAttribute="top" secondItem="Ctg-Od-rqQ" secondAttribute="top" constant="14" id="wb0-R6-Ohd"/>
                         </constraints>
                     </view>
