@@ -1,5 +1,5 @@
 //
-//  ShoppingViewController.swift
+//  ChatViewController.swift
 //  Sopt28th_1st_Assignment
 //
 //  Created by 김루희 on 2021/04/14.
@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ShoppingViewController: UIViewController {
+class ChatViewController: UIViewController {
 
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

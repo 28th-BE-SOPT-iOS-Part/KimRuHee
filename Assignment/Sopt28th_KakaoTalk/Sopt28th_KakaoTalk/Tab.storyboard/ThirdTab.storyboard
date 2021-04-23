@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="xmt-39-xJb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="circles.hexagongrid" catalog="system" id="qOj-GL-k2f"/>
+                    <tabBarItem key="tabBarItem" title="" image="searchTabIcon" selectedImage="searchTabIconSelected" id="qOj-GL-k2f"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lx-Qn-ghe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -27,7 +27,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="circles.hexagongrid" catalog="system" width="128" height="112"/>
+        <image name="searchTabIcon" width="15" height="17.5"/>
+        <image name="searchTabIconSelected" width="15" height="17.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

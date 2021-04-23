@@ -80,23 +80,23 @@
 		BB35E8872626E9D20086DE5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BB35E89C2626EC8A0086DE5D /* Entering Controllers */,
-				BB35E89D2626EC9E0086DE5D /* TabBar Controllers */,
+				BB35E89C2626EC8A0086DE5D /* Login Controllers */,
+				BB35E89D2626EC9E0086DE5D /* Main Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		BB35E89C2626EC8A0086DE5D /* Entering Controllers */ = {
+		BB35E89C2626EC8A0086DE5D /* Login Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				BB7776A1261AD86A0087AB5F /* LoginViewController.swift */,
 				BB7776B3261AE1920087AB5F /* SignUpViewController.swift */,
 				BB7776B7261AE4D00087AB5F /* CompleteViewController.swift */,
 			);
-			path = "Entering Controllers";
+			path = "Login Controllers";
 			sourceTree = "<group>";
 		};
-		BB35E89D2626EC9E0086DE5D /* TabBar Controllers */ = {
+		BB35E89D2626EC9E0086DE5D /* Main Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				BB341EC82628973E00BF274D /* MainTabBarController.swift */,
@@ -107,7 +107,7 @@
 				BB35E8952626EB0E0086DE5D /* ShoppingViewController.swift */,
 				BB35E8982626EB1A0086DE5D /* SettingViewController.swift */,
 			);
-			path = "TabBar Controllers";
+			path = "Main Controllers";
 			sourceTree = "<group>";
 		};
 		BB777691261AD86A0087AB5F = {
@@ -377,6 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
 				INFOPLIST_FILE = Sopt28th_KakaoTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,6 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
 				INFOPLIST_FILE = Sopt28th_KakaoTalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

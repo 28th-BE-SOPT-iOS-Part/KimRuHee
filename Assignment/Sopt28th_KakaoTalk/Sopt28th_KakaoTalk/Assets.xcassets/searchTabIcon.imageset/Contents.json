@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "searchTabIcon.png",
+      "scale" : "1x",
+      "idiom" : "universal"
+    },
+    {
+      "scale" : "2x",
+      "filename" : "searchTabIcon@2x.png",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "searchTabIcon@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

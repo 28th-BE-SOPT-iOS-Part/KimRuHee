@@ -1,5 +1,5 @@
 //
-//  SettingViewController.swift
+//  TagViewController.swift
 //  Sopt28th_1st_Assignment
 //
 //  Created by 김루희 on 2021/04/14.
@@ -7,8 +7,10 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
+class TagViewController: UIViewController {
 
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

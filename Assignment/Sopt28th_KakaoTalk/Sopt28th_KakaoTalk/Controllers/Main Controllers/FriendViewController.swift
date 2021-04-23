@@ -9,16 +9,20 @@ import UIKit
 
 class FriendViewController: UIViewController {
 
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    //MARK: - Helpers
+    
     @IBAction func profileButton(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "MyProfileViewController") as? MyProfileViewController else { return }
         
-        nextVC.modalPresentationStyle = .fullScreen
+        nextVC.modalPresentationStyle = .overFullScreen
         
         self.present(nextVC, animated: true, completion: nil)
         
