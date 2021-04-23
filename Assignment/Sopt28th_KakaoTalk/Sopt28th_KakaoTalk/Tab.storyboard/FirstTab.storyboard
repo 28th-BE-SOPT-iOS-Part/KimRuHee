@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sRG-8f-o3T">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -158,6 +159,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ctg-Od-rqQ"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="SvQ-9y-AQH" firstAttribute="leading" secondItem="ldJ-tj-ajh" secondAttribute="leading" constant="18" id="2oj-Tf-oOp"/>
                             <constraint firstItem="B8l-CE-rHA" firstAttribute="leading" secondItem="ldJ-tj-ajh" secondAttribute="leading" id="6k3-IL-6bP"/>
@@ -172,9 +174,13 @@
                             <constraint firstItem="4WK-Qb-Uih" firstAttribute="centerX" secondItem="ldJ-tj-ajh" secondAttribute="centerX" id="hcs-Gm-etX"/>
                             <constraint firstItem="SvQ-9y-AQH" firstAttribute="top" secondItem="Ctg-Od-rqQ" secondAttribute="top" constant="14" id="wb0-R6-Ohd"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LPb-qH-1Rg" appends="YES" id="1St-4C-djM"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oT3-lm-RlO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="LPb-qH-1Rg"/>
             </objects>
             <point key="canvasLocation" x="743" y="163"/>
         </scene>

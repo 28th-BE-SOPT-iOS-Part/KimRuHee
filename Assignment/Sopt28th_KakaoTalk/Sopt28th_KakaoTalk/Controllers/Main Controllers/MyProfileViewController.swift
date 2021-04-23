@@ -35,12 +35,10 @@ class MyProfileViewController: UIViewController {
         switch sender.state {
         case .changed:
             // 상하로 스와이프 할 때 위로 스와이프가 안되게 해주기 위해서 조건 설정
-            if abs(viewVelocity.y) > abs(viewVelocity.x) {
-                if viewVelocity.y > 0 {
-                    UIView.animate(withDuration: 0.1, animations: {
-                        self.view.transform = CGAffineTransform(translationX: 0, y: self.viewTranslation.y)
-                    })
-                }
+            if viewVelocity.y > 0 {
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.view.transform = CGAffineTransform(translationX: 0, y: self.viewTranslation.y)
+                })
             }
         case .ended:
             // 해당 뷰의 y값이 400보다 작으면(작게 이동 시) 뷰의 위치를 다시 원상복구하겠다. = 즉, 다시 y=0인 지점으로 리셋
