@@ -8,8 +8,8 @@
 
 | 주차 | 내용 | 과제 | 리드미 |
 | :------: | :-------------- |  :---: |:-:|
-| 1주차 | iOS기초, H.I.G를 통한 컴포넌트의 이해, View 화면 전환 | 🙆‍♀️ | [🗳](./README/1week_README.md) |
-| 2주차 | Autolayout을 통한 기초 UI 구성, Scroll View의 이해 | - | - |
+| 1주차 | iOS기초, H.I.G를 통한 컴포넌트의 이해, View 화면 전환 | [🙆‍♀️](./Assignment/) | [🗳](./README/1week_README.md) |
+| 2주차 | Autolayout을 통한 기초 UI 구성, Scroll View의 이해 | [🙆‍♀️](./Assignment) | [🗳](./README/2week_README.md) |
 | 3주차 | TableView, CollectionView, 데이터 전달 방식의 이해 | - | - |
 | 4주차 | Cocoapod & Networking + 솝커톤 전 보충 세미나 | - | - |
 | 5주차 | 디자인 합동 세미나 | - | - |
