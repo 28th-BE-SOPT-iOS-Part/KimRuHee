@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q5S-yW-TbJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_data_passing_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZ5-bG-BeV">
+                                <rect key="frame" x="0.0" y="614" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="wXp-RU-yrx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1X4-lf-UyI">
+                                <rect key="frame" x="0.0" y="490" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="VAJ-Ts-JB2"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOc-DI-WjK">
+                                <rect key="frame" x="0.0" y="257" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="C7o-Yi-d08"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="U8d-3t-o1b"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWH-do-Ivt">
+                                <rect key="frame" x="0.0" y="378" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="xU6-Nq-mTm"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5x4-Jz-kds">
+                                <rect key="frame" x="295" y="201" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="ct7-1H-JdZ"/>
+                                </constraints>
+                                <state key="normal" title="전송하기"/>
+                                <connections>
+                                    <action selector="first:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbH-62-xdJ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHH-Rf-fe1">
+                                <rect key="frame" x="75" y="201" width="190" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. 프로퍼티에 접근해 데이터 넘기기(A-&gt;B)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvt-ml-4iw">
+                                <rect key="frame" x="64" y="162" width="286.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8E-VU-21F">
+                                <rect key="frame" x="295" y="324" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="5pj-QW-OBK"/>
+                                </constraints>
+                                <state key="normal" title="전송하기"/>
+                                <connections>
+                                    <segue destination="HhI-Hi-UCP" kind="show" id="flP-aI-Bwu"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U02-ax-YMZ">
+                                <rect key="frame" x="75" y="320" width="204" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. 세그를 이용해 data 주고받기 (A-&gt;B)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tt-xt-TcP">
+                                <rect key="frame" x="73" y="277" width="268.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fta-dE-J27">
+                                <rect key="frame" x="302" y="440" width="52" height="30"/>
+                                <state key="normal" title="이동하기"/>
+                                <connections>
+                                    <action selector="third:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jkj-k4-F58"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. delegation 이용해서 데이터 받기 (A-&gt; B)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c89-rd-2J1">
+                                <rect key="frame" x="55" y="399" width="304.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ5-Ak-Uy1">
+                                <rect key="frame" x="302" y="554" width="52" height="30"/>
+                                <state key="normal" title="이동하기"/>
+                                <connections>
+                                    <action selector="fourth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O9N-Yw-Fc4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. closure 이용해서 받기(A &lt;- B)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8S-NY-own">
+                                <rect key="frame" x="91" y="511" width="232" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift 데이터 직접 전달 방법 총정리" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgR-S6-SPn">
+                                <rect key="frame" x="61.5" y="111" width="291.5" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krd-ms-wbi">
+                                <rect key="frame" x="312" y="674" width="52" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="urh-0b-38J"/>
+                                </constraints>
+                                <state key="normal" title="이동하기"/>
+                                <connections>
+                                    <action selector="fifth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yrb-wB-Yyc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5. NotificationCenter 이용해서 데이터 주고받기 (A &lt;-B)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HX-5h-72P">
+                                <rect key="frame" x="42" y="635" width="330" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터가 여기에 표시됩니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqQ-Gg-pGB">
+                                <rect key="frame" x="141.5" y="450" width="120.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전달받은 데이터 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYA-NM-0w8">
+                                <rect key="frame" x="40" y="450" width="76.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터가 여기에 표시됩니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3l-KV-ySu">
+                                <rect key="frame" x="136.5" y="562" width="120.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전달받은 데이터 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43i-2j-nsu">
+                                <rect key="frame" x="40" y="562" width="76.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28기 아요 화이팅 :) " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F53-GI-OtB">
+                                <rect key="frame" x="138.5" y="801" width="137" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터가 여기에 표시됩니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-5D-MWB">
+                                <rect key="frame" x="140" y="682" width="121" height="13.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="121" id="HUb-c4-Php"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전달받은 데이터 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvm-2c-bF0">
+                                <rect key="frame" x="40" y="682" width="80" height="13.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="kvU-5v-x5J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="43i-2j-nsu" firstAttribute="top" secondItem="o8S-NY-own" secondAttribute="bottom" constant="30" id="0uh-QP-P22"/>
+                            <constraint firstItem="KlM-5D-MWB" firstAttribute="top" secondItem="8HX-5h-72P" secondAttribute="bottom" constant="30" id="1rv-qF-p7D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5x4-Jz-kds" secondAttribute="trailing" constant="67" id="2ku-Jt-bJb"/>
+                            <constraint firstItem="Nvm-2c-bF0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4b8-ie-HrD"/>
+                            <constraint firstItem="KOc-DI-WjK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4dX-i6-2jo"/>
+                            <constraint firstItem="1X4-lf-UyI" firstAttribute="top" secondItem="Fta-dE-J27" secondAttribute="bottom" constant="20" id="6h7-hP-XU6"/>
+                            <constraint firstItem="TgR-S6-SPn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7OH-zx-i1G"/>
+                            <constraint firstItem="dZ5-bG-BeV" firstAttribute="top" secondItem="hQ5-Ak-Uy1" secondAttribute="bottom" constant="30" id="8CS-Ye-Xb7"/>
+                            <constraint firstItem="c89-rd-2J1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B0C-nb-xqY"/>
+                            <constraint firstItem="o8S-NY-own" firstAttribute="top" secondItem="1X4-lf-UyI" secondAttribute="bottom" constant="20" id="BBH-FE-UM5"/>
+                            <constraint firstItem="lqQ-Gg-pGB" firstAttribute="top" secondItem="c89-rd-2J1" secondAttribute="bottom" constant="30" id="G3e-mK-2TS"/>
+                            <constraint firstItem="Gvt-ml-4iw" firstAttribute="top" secondItem="TgR-S6-SPn" secondAttribute="bottom" constant="25.5" id="HUg-OU-Msc"/>
+                            <constraint firstItem="nHH-Rf-fe1" firstAttribute="top" secondItem="Gvt-ml-4iw" secondAttribute="bottom" constant="18" id="Kyw-9O-XMS"/>
+                            <constraint firstItem="lqQ-Gg-pGB" firstAttribute="leading" secondItem="jYA-NM-0w8" secondAttribute="trailing" constant="25" id="LSd-dX-4my"/>
+                            <constraint firstItem="Fta-dE-J27" firstAttribute="top" secondItem="c89-rd-2J1" secondAttribute="bottom" constant="20" id="McW-5U-HQu"/>
+                            <constraint firstItem="w8E-VU-21F" firstAttribute="top" secondItem="1Tt-xt-TcP" secondAttribute="bottom" constant="26" id="OEk-hf-P3A"/>
+                            <constraint firstItem="jYA-NM-0w8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Qpm-LZ-d9i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dZ5-bG-BeV" secondAttribute="trailing" id="Rb4-4G-dOr"/>
+                            <constraint firstItem="hQ5-Ak-Uy1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a3l-KV-ySu" secondAttribute="trailing" constant="8" symbolic="YES" id="SnX-Nw-qJd"/>
+                            <constraint firstItem="U02-ax-YMZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="UeK-jr-cHr"/>
+                            <constraint firstItem="c89-rd-2J1" firstAttribute="top" secondItem="bWH-do-Ivt" secondAttribute="bottom" constant="20" id="V9A-JQ-Mk4"/>
+                            <constraint firstItem="1X4-lf-UyI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vbd-hv-ydA"/>
+                            <constraint firstItem="Krd-ms-wbi" firstAttribute="top" secondItem="8HX-5h-72P" secondAttribute="bottom" constant="22" id="VdP-Sa-csX"/>
+                            <constraint firstItem="KOc-DI-WjK" firstAttribute="top" secondItem="nHH-Rf-fe1" secondAttribute="bottom" constant="22" id="W0j-90-0aY"/>
+                            <constraint firstItem="KlM-5D-MWB" firstAttribute="leading" secondItem="Nvm-2c-bF0" secondAttribute="trailing" constant="20" id="Wd3-eL-sI3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F53-GI-OtB" secondAttribute="bottom" constant="40" id="XdJ-ra-Hld"/>
+                            <constraint firstItem="43i-2j-nsu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Xoa-HW-Jbk"/>
+                            <constraint firstItem="TgR-S6-SPn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="Y1u-vs-sdO"/>
+                            <constraint firstAttribute="trailing" secondItem="1X4-lf-UyI" secondAttribute="trailing" id="YaZ-2z-RNy"/>
+                            <constraint firstItem="w8E-VU-21F" firstAttribute="leading" secondItem="U02-ax-YMZ" secondAttribute="trailing" constant="16" id="cVi-mk-c4t"/>
+                            <constraint firstItem="Gvt-ml-4iw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="chs-kX-t6w"/>
+                            <constraint firstItem="8HX-5h-72P" firstAttribute="top" secondItem="dZ5-bG-BeV" secondAttribute="bottom" constant="20" id="dOK-zN-iMR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Krd-ms-wbi" secondAttribute="trailing" constant="50" id="dXL-9d-a8R"/>
+                            <constraint firstItem="o8S-NY-own" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dsR-R1-UjF"/>
+                            <constraint firstItem="jYA-NM-0w8" firstAttribute="top" secondItem="c89-rd-2J1" secondAttribute="bottom" constant="30" id="ey3-D0-K6j"/>
+                            <constraint firstItem="a3l-KV-ySu" firstAttribute="leading" secondItem="43i-2j-nsu" secondAttribute="trailing" constant="20" id="f6Y-XH-k4o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hQ5-Ak-Uy1" secondAttribute="trailing" constant="60" id="foS-Lc-8qG"/>
+                            <constraint firstItem="Krd-ms-wbi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KlM-5D-MWB" secondAttribute="trailing" id="h3N-D6-EbF"/>
+                            <constraint firstItem="8HX-5h-72P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jah-6k-cUJ"/>
+                            <constraint firstItem="1Tt-xt-TcP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jiA-87-kc6"/>
+                            <constraint firstItem="a3l-KV-ySu" firstAttribute="top" secondItem="o8S-NY-own" secondAttribute="bottom" constant="30" id="jrQ-QT-sfz"/>
+                            <constraint firstItem="5x4-Jz-kds" firstAttribute="top" secondItem="Gvt-ml-4iw" secondAttribute="bottom" constant="18" id="oXq-Bk-qMh"/>
+                            <constraint firstItem="F53-GI-OtB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pDc-k6-rnK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w8E-VU-21F" secondAttribute="trailing" constant="67" id="pfl-i2-23U"/>
+                            <constraint firstItem="5x4-Jz-kds" firstAttribute="leading" secondItem="nHH-Rf-fe1" secondAttribute="trailing" constant="30" id="qw4-dK-V0P"/>
+                            <constraint firstItem="bWH-do-Ivt" firstAttribute="top" secondItem="KOc-DI-WjK" secondAttribute="bottom" constant="120" id="r6l-nR-wjD"/>
+                            <constraint firstItem="1Tt-xt-TcP" firstAttribute="top" secondItem="KOc-DI-WjK" secondAttribute="bottom" constant="19" id="sRe-FX-WCN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fta-dE-J27" secondAttribute="trailing" constant="60" id="t4s-XA-byT"/>
+                            <constraint firstItem="dZ5-bG-BeV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uve-bI-Ghy"/>
+                            <constraint firstItem="hQ5-Ak-Uy1" firstAttribute="top" secondItem="1X4-lf-UyI" secondAttribute="bottom" constant="63" id="v2K-yD-YED"/>
+                            <constraint firstItem="bWH-do-Ivt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vwG-Qh-Uok"/>
+                            <constraint firstItem="Fta-dE-J27" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lqQ-Gg-pGB" secondAttribute="trailing" constant="8" symbolic="YES" id="xLn-eW-rcf"/>
+                            <constraint firstItem="nHH-Rf-fe1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="y45-UJ-s0q"/>
+                            <constraint firstItem="U02-ax-YMZ" firstAttribute="top" secondItem="1Tt-xt-TcP" secondAttribute="bottom" constant="22" id="y4l-cl-fIL"/>
+                            <constraint firstItem="Nvm-2c-bF0" firstAttribute="top" secondItem="8HX-5h-72P" secondAttribute="bottom" constant="30" id="yAI-vn-rZM"/>
+                            <constraint firstItem="bWH-do-Ivt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yf7-hd-xYC"/>
+                            <constraint firstItem="KOc-DI-WjK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zv9-Vd-Rsc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wPX-5B-ffR"/>
+                    <connections>
+                        <outlet property="closureTextLabel" destination="a3l-KV-ySu" id="GIl-tF-Iv4"/>
+                        <outlet property="delegationTextField" destination="lqQ-Gg-pGB" id="xs7-CN-ULF"/>
+                        <outlet property="notificationTextLabel" destination="KlM-5D-MWB" id="oos-ae-WTk"/>
+                        <outlet property="propertyTextField" destination="nHH-Rf-fe1" id="ofM-sR-Soc"/>
+                        <outlet property="segueTextField" destination="U02-ax-YMZ" id="NmW-cO-WAv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263.768115942029" y="116.51785714285714"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="vF6-lk-MzE">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" id="zPO-Uo-JiT" customClass="FirstViewController" customModule="Swift_data_passing_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="37r-q5-Jr3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZB-tr-oDp">
+                                <rect key="frame" x="186.5" y="436" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로퍼티에 접근해 데이터를 넘겨주기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCe-3R-8wn">
+                                <rect key="frame" x="82.5" y="294" width="249" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인에서 넘어온 데이터값" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpV-E7-4Oq">
+                                <rect key="frame" x="121.5" y="365" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ukV-TS-IVa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CZB-tr-oDp" firstAttribute="centerX" secondItem="37r-q5-Jr3" secondAttribute="centerX" id="G9M-0I-fFB"/>
+                            <constraint firstItem="LpV-E7-4Oq" firstAttribute="centerX" secondItem="37r-q5-Jr3" secondAttribute="centerX" id="PO6-u1-vCl"/>
+                            <constraint firstItem="gCe-3R-8wn" firstAttribute="top" secondItem="ukV-TS-IVa" secondAttribute="top" constant="250" id="do4-ld-edc"/>
+                            <constraint firstItem="LpV-E7-4Oq" firstAttribute="top" secondItem="gCe-3R-8wn" secondAttribute="bottom" constant="50" id="exK-Oo-rQL"/>
+                            <constraint firstItem="CZB-tr-oDp" firstAttribute="top" secondItem="LpV-E7-4Oq" secondAttribute="bottom" constant="50" id="iMR-we-nSI"/>
+                            <constraint firstItem="gCe-3R-8wn" firstAttribute="centerX" secondItem="37r-q5-Jr3" secondAttribute="centerX" id="xO4-Ya-shW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="CZB-tr-oDp" id="7PN-8A-5kK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YnC-ec-SHI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="-577"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="k8G-0M-4f3">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="HhI-Hi-UCP" customClass="SecondViewController" customModule="Swift_data_passing_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bEl-49-d8O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSS-qz-hKg">
+                                <rect key="frame" x="186.5" y="480" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세그로 접근해서 데이터 주고 받기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEc-Hu-J2M">
+                                <rect key="frame" x="95" y="338" width="224" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인에서 넘어온 데이터값" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wA-7i-4y6">
+                                <rect key="frame" x="121.5" y="409" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zkI-RC-2D2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JEc-Hu-J2M" firstAttribute="centerX" secondItem="bEl-49-d8O" secondAttribute="centerX" id="OTV-WW-wuJ"/>
+                            <constraint firstItem="JEc-Hu-J2M" firstAttribute="top" secondItem="zkI-RC-2D2" secondAttribute="top" constant="250" id="PN7-K3-wob"/>
+                            <constraint firstItem="HSS-qz-hKg" firstAttribute="centerX" secondItem="bEl-49-d8O" secondAttribute="centerX" id="dXo-5O-H8W"/>
+                            <constraint firstItem="2wA-7i-4y6" firstAttribute="top" secondItem="JEc-Hu-J2M" secondAttribute="bottom" constant="50" id="uKq-o0-Bso"/>
+                            <constraint firstItem="HSS-qz-hKg" firstAttribute="top" secondItem="2wA-7i-4y6" secondAttribute="bottom" constant="50" id="veN-C8-z6Z"/>
+                            <constraint firstItem="2wA-7i-4y6" firstAttribute="centerX" secondItem="bEl-49-d8O" secondAttribute="centerX" id="y42-go-nWz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l5d-R3-awU"/>
+                    <connections>
+                        <outlet property="textLabel" destination="HSS-qz-hKg" id="xNu-3d-kxi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPD-Ik-wvv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="117"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="YcE-x8-CQo">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="Ypk-my-G4e" customClass="ThirdViewController" customModule="Swift_data_passing_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hUI-dL-ZNE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="delegate를 이용해 데이터 주고받기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNJ-Qt-lms">
+                                <rect key="frame" x="86" y="279" width="242" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인으로 넘겨줄 데이터값" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH1-5B-EEa">
+                                <rect key="frame" x="121.5" y="350" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IZv-wb-eSZ">
+                                <rect key="frame" x="50" y="421" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3l9-rH-8du">
+                                <rect key="frame" x="181" y="505" width="52" height="30"/>
+                                <state key="normal" title="전송하기"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="Ypk-my-G4e" eventType="touchUpInside" id="mJF-Rh-Hq0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SBw-lc-gcj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IZv-wb-eSZ" firstAttribute="centerX" secondItem="hUI-dL-ZNE" secondAttribute="centerX" id="4bG-Jc-Mgb"/>
+                            <constraint firstItem="3l9-rH-8du" firstAttribute="centerX" secondItem="hUI-dL-ZNE" secondAttribute="centerX" id="B7L-Cg-zXd"/>
+                            <constraint firstItem="BNJ-Qt-lms" firstAttribute="top" secondItem="SBw-lc-gcj" secondAttribute="top" constant="235" id="D4C-B8-Ue0"/>
+                            <constraint firstItem="kH1-5B-EEa" firstAttribute="centerX" secondItem="hUI-dL-ZNE" secondAttribute="centerX" id="DDH-WG-Ebw"/>
+                            <constraint firstItem="IZv-wb-eSZ" firstAttribute="top" secondItem="kH1-5B-EEa" secondAttribute="bottom" constant="50" id="DN0-vt-9fl"/>
+                            <constraint firstItem="kH1-5B-EEa" firstAttribute="top" secondItem="BNJ-Qt-lms" secondAttribute="bottom" constant="50" id="MPZ-tg-ZQd"/>
+                            <constraint firstItem="SBw-lc-gcj" firstAttribute="trailing" secondItem="IZv-wb-eSZ" secondAttribute="trailing" constant="50" id="OP1-oJ-Wmy"/>
+                            <constraint firstItem="BNJ-Qt-lms" firstAttribute="centerX" secondItem="hUI-dL-ZNE" secondAttribute="centerX" id="Y41-Mm-ahg"/>
+                            <constraint firstItem="IZv-wb-eSZ" firstAttribute="leading" secondItem="SBw-lc-gcj" secondAttribute="leading" constant="50" id="czx-uY-hSn"/>
+                            <constraint firstItem="3l9-rH-8du" firstAttribute="top" secondItem="IZv-wb-eSZ" secondAttribute="bottom" constant="50" id="xT2-oc-VcL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="IZv-wb-eSZ" id="NIS-ch-GU6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6DS-zH-VZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="780"/>
+        </scene>
+        <!--Fifth View Controller-->
+        <scene sceneID="h8D-kE-nk4">
+            <objects>
+                <viewController storyboardIdentifier="FifthViewController" id="gso-gJ-Ag1" customClass="FifthViewController" customModule="Swift_data_passing_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ctt-T7-GsE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NotificationCenter를 이용해 데이터 주고받기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDl-q0-4v6">
+                                <rect key="frame" x="50" y="294" width="314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인으로 넘겨줄 데이터값" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrC-Vm-S1F">
+                                <rect key="frame" x="121.5" y="365" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GdE-11-Ff3">
+                                <rect key="frame" x="50" y="436" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s25-Z4-0hf">
+                                <rect key="frame" x="181" y="520" width="52" height="30"/>
+                                <state key="normal" title="전송하기"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="Ypk-my-G4e" eventType="touchUpInside" id="9wH-Ft-5CP"/>
+                                    <action selector="sendButtonClicked:" destination="gso-gJ-Ag1" eventType="touchUpInside" id="I6d-fZ-h9j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="m38-Ga-O4n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m38-Ga-O4n" firstAttribute="trailing" secondItem="GdE-11-Ff3" secondAttribute="trailing" constant="50" id="DCg-FE-dnx"/>
+                            <constraint firstItem="GdE-11-Ff3" firstAttribute="leading" secondItem="m38-Ga-O4n" secondAttribute="leading" constant="50" id="E6x-7D-urP"/>
+                            <constraint firstItem="oDl-q0-4v6" firstAttribute="centerX" secondItem="ctt-T7-GsE" secondAttribute="centerX" id="EmT-yz-Ix0"/>
+                            <constraint firstItem="oDl-q0-4v6" firstAttribute="top" secondItem="m38-Ga-O4n" secondAttribute="top" constant="250" id="IGG-to-UsU"/>
+                            <constraint firstItem="GdE-11-Ff3" firstAttribute="centerX" secondItem="ctt-T7-GsE" secondAttribute="centerX" id="T1f-Ht-JJC"/>
+                            <constraint firstItem="GdE-11-Ff3" firstAttribute="top" secondItem="BrC-Vm-S1F" secondAttribute="bottom" constant="50" id="bfj-QC-snU"/>
+                            <constraint firstItem="s25-Z4-0hf" firstAttribute="centerX" secondItem="ctt-T7-GsE" secondAttribute="centerX" id="dPk-9o-lyh"/>
+                            <constraint firstItem="BrC-Vm-S1F" firstAttribute="top" secondItem="oDl-q0-4v6" secondAttribute="bottom" constant="50" id="etg-Hr-d3w"/>
+                            <constraint firstItem="s25-Z4-0hf" firstAttribute="top" secondItem="GdE-11-Ff3" secondAttribute="bottom" constant="50" id="vPN-sW-VTR"/>
+                            <constraint firstItem="BrC-Vm-S1F" firstAttribute="centerX" secondItem="ctt-T7-GsE" secondAttribute="centerX" id="zks-fX-r1e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataTextField" destination="GdE-11-Ff3" id="B6i-fT-Nui"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOz-wL-H7r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="2178"/>
+        </scene>
+        <!--Fourth View Controller-->
+        <scene sceneID="3UD-V0-0HB">
+            <objects>
+                <viewController storyboardIdentifier="FourthViewController" id="Z24-kG-g7B" customClass="FourthViewController" customModule="Swift_data_passing_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dx8-iR-6hb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="closure를 이용해 데이터 주고받기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8F-QG-FYH">
+                                <rect key="frame" x="91.5" y="294" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인으로 넘겨줄 데이터값" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDL-j4-Nhf">
+                                <rect key="frame" x="121.5" y="375" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n9W-pf-UKr">
+                                <rect key="frame" x="191" y="456" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frm-8D-6Ch">
+                                <rect key="frame" x="181" y="550" width="52" height="30"/>
+                                <state key="normal" title="전송하기"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="Z24-kG-g7B" eventType="touchUpInside" id="4bD-NO-Je7"/>
+                                    <action selector="buttonClicked:" destination="Ypk-my-G4e" eventType="touchUpInside" id="cfY-42-GBL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TK2-SL-eiZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h8F-QG-FYH" firstAttribute="top" secondItem="TK2-SL-eiZ" secondAttribute="top" constant="250" id="5WH-VU-tCG"/>
+                            <constraint firstItem="frm-8D-6Ch" firstAttribute="top" secondItem="n9W-pf-UKr" secondAttribute="bottom" constant="60" id="6zi-2B-0nS"/>
+                            <constraint firstItem="n9W-pf-UKr" firstAttribute="centerX" secondItem="dx8-iR-6hb" secondAttribute="centerX" id="DJU-Rg-eFW"/>
+                            <constraint firstItem="TDL-j4-Nhf" firstAttribute="top" secondItem="h8F-QG-FYH" secondAttribute="bottom" constant="60" id="LU7-VH-YTx"/>
+                            <constraint firstItem="h8F-QG-FYH" firstAttribute="centerX" secondItem="dx8-iR-6hb" secondAttribute="centerX" id="e7z-3S-a1q"/>
+                            <constraint firstItem="n9W-pf-UKr" firstAttribute="top" secondItem="TDL-j4-Nhf" secondAttribute="bottom" constant="60" id="fk1-ME-tth"/>
+                            <constraint firstItem="frm-8D-6Ch" firstAttribute="centerX" secondItem="dx8-iR-6hb" secondAttribute="centerX" id="jAe-7q-ND9"/>
+                            <constraint firstItem="TDL-j4-Nhf" firstAttribute="centerX" secondItem="dx8-iR-6hb" secondAttribute="centerX" id="kJY-mH-X8A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="n9W-pf-UKr" id="ilE-e5-bE6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXw-YF-wq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="1480"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dDb-pf-MkM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q5S-yW-TbJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FxJ-Qs-OFY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eRO-7r-uQN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HGZ-C3-zfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-645" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
