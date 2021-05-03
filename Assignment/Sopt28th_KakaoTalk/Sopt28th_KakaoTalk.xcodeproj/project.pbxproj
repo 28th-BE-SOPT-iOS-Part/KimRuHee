@@ -19,6 +19,8 @@
 		BB35E8962626EB0E0086DE5D /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB35E8952626EB0E0086DE5D /* ShoppingViewController.swift */; };
 		BB35E8992626EB1A0086DE5D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB35E8982626EB1A0086DE5D /* SettingViewController.swift */; };
 		BB35E8A02626ECE00086DE5D /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB35E89F2626ECE00086DE5D /* MyProfileViewController.swift */; };
+		BB5AC291263F023300C969C7 /* FriendListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5AC290263F023300C969C7 /* FriendListDataModel.swift */; };
+		BB70A213263F3BC000389786 /* SettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB70A212263F3BC000389786 /* SettingCollectionViewCell.swift */; };
 		BB77769E261AD86A0087AB5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB77769D261AD86A0087AB5F /* AppDelegate.swift */; };
 		BB7776A0261AD86A0087AB5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB77769F261AD86A0087AB5F /* SceneDelegate.swift */; };
 		BB7776A2261AD86A0087AB5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7776A1261AD86A0087AB5F /* LoginViewController.swift */; };
@@ -27,6 +29,7 @@
 		BB7776AA261AD86E0087AB5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB7776A8261AD86E0087AB5F /* LaunchScreen.storyboard */; };
 		BB7776B4261AE1920087AB5F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7776B3261AE1920087AB5F /* SignUpViewController.swift */; };
 		BB7776B8261AE4D00087AB5F /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7776B7261AE4D00087AB5F /* CompleteViewController.swift */; };
+		BBFC28CA2637D8E000B4570E /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFC28C92637D8E000B4570E /* FriendTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,8 @@
 		BB35E8952626EB0E0086DE5D /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
 		BB35E8982626EB1A0086DE5D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BB35E89F2626ECE00086DE5D /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		BB5AC290263F023300C969C7 /* FriendListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListDataModel.swift; sourceTree = "<group>"; };
+		BB70A212263F3BC000389786 /* SettingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB77769A261AD86A0087AB5F /* Sopt28th_1st_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sopt28th_1st_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB77769D261AD86A0087AB5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB77769F261AD86A0087AB5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +57,7 @@
 		BB7776AB261AD86E0087AB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7776B3261AE1920087AB5F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BB7776B7261AE4D00087AB5F /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
+		BBFC28C92637D8E000B4570E /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendTableViewCell.swift; path = Sopt28th_KakaoTalk/Tab.storyboard/FriendTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +107,13 @@
 			children = (
 				BB341EC82628973E00BF274D /* MainTabBarController.swift */,
 				BB35E88F2626EAE60086DE5D /* FriendViewController.swift */,
+				BBFC28C92637D8E000B4570E /* FriendTableViewCell.swift */,
 				BB35E89F2626ECE00086DE5D /* MyProfileViewController.swift */,
 				BB35E88B2626EA310086DE5D /* ChatViewController.swift */,
 				BB35E8922626EAF00086DE5D /* TagViewController.swift */,
 				BB35E8952626EB0E0086DE5D /* ShoppingViewController.swift */,
 				BB35E8982626EB1A0086DE5D /* SettingViewController.swift */,
+				BB70A212263F3BC000389786 /* SettingCollectionViewCell.swift */,
 			);
 			path = "Main Controllers";
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 			children = (
 				BB77769D261AD86A0087AB5F /* AppDelegate.swift */,
 				BB77769F261AD86A0087AB5F /* SceneDelegate.swift */,
+				BB5AC290263F023300C969C7 /* FriendListDataModel.swift */,
 				BB7776A3261AD86A0087AB5F /* Main.storyboard */,
 				BB35E8702626E41C0086DE5D /* Tab.storyboard */,
 				BB35E8872626E9D20086DE5D /* Controllers */,
@@ -223,11 +232,14 @@
 				BB7776B4261AE1920087AB5F /* SignUpViewController.swift in Sources */,
 				BB35E8A02626ECE00086DE5D /* MyProfileViewController.swift in Sources */,
 				BB35E8902626EAE60086DE5D /* FriendViewController.swift in Sources */,
+				BBFC28CA2637D8E000B4570E /* FriendTableViewCell.swift in Sources */,
 				BB35E8992626EB1A0086DE5D /* SettingViewController.swift in Sources */,
 				BB35E88C2626EA310086DE5D /* ChatViewController.swift in Sources */,
+				BB70A213263F3BC000389786 /* SettingCollectionViewCell.swift in Sources */,
 				BB35E8932626EAF00086DE5D /* TagViewController.swift in Sources */,
 				BB7776B8261AE4D00087AB5F /* CompleteViewController.swift in Sources */,
 				BB7776A0261AD86A0087AB5F /* SceneDelegate.swift in Sources */,
+				BB5AC291263F023300C969C7 /* FriendListDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

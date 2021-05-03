@@ -17,31 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="law-XE-P0P">
-                                <rect key="frame" x="14" y="59" width="39" height="27"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVB-hR-ilG">
-                                <rect key="frame" x="13" y="104" width="59" height="58"/>
-                                <state key="normal" image="friendtabProfileImg"/>
-                                <connections>
-                                    <action selector="profileButton:" destination="sRG-8f-o3T" eventType="touchUpInside" id="Abw-Os-FJP"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFd-yV-9nO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="law-XE-P0P">
+                                        <rect key="frame" x="14" y="15" width="39" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2c-L1-SDh">
+                                        <rect key="frame" x="380" y="17" width="19" height="25"/>
+                                        <state key="normal" image="settingIcon"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="X2c-L1-SDh" secondAttribute="trailing" constant="15" id="8IP-45-YKV"/>
+                                    <constraint firstAttribute="bottom" secondItem="X2c-L1-SDh" secondAttribute="bottom" constant="16" id="DVt-GN-9Gd"/>
+                                    <constraint firstItem="law-XE-P0P" firstAttribute="leading" secondItem="WFd-yV-9nO" secondAttribute="leading" constant="14" id="KAC-7E-LmN"/>
+                                    <constraint firstItem="law-XE-P0P" firstAttribute="top" secondItem="WFd-yV-9nO" secondAttribute="top" constant="15" id="TjA-SI-9mg"/>
+                                    <constraint firstAttribute="bottom" secondItem="law-XE-P0P" secondAttribute="bottom" constant="16" id="aDq-6v-J4M"/>
+                                    <constraint firstItem="X2c-L1-SDh" firstAttribute="top" secondItem="WFd-yV-9nO" secondAttribute="top" constant="17" id="hXD-6j-JcC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g42-3C-Z8r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fVB-hR-ilG" firstAttribute="leading" secondItem="7c7-do-Ojd" secondAttribute="leading" constant="13" id="0Cj-5o-v01"/>
-                            <constraint firstItem="law-XE-P0P" firstAttribute="top" secondItem="g42-3C-Z8r" secondAttribute="top" constant="15" id="THh-cA-zVz"/>
-                            <constraint firstItem="fVB-hR-ilG" firstAttribute="top" secondItem="law-XE-P0P" secondAttribute="bottom" constant="18" id="bbz-gY-PcM"/>
-                            <constraint firstItem="law-XE-P0P" firstAttribute="leading" secondItem="7c7-do-Ojd" secondAttribute="leading" constant="14" id="ydi-tZ-OdN"/>
+                            <constraint firstItem="WFd-yV-9nO" firstAttribute="leading" secondItem="7c7-do-Ojd" secondAttribute="leading" id="RIi-B6-jsC"/>
+                            <constraint firstItem="WFd-yV-9nO" firstAttribute="top" secondItem="g42-3C-Z8r" secondAttribute="top" id="mEY-XZ-3KY"/>
+                            <constraint firstAttribute="trailing" secondItem="WFd-yV-9nO" secondAttribute="trailing" id="rdf-FO-6oR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="friendTabIcon" selectedImage="friendTabIconSelected" id="D77-OS-52P"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="upperView" destination="WFd-yV-9nO" id="Nqn-Hg-Zrn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qou-ui-Ibt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,12 +201,12 @@
     <resources>
         <image name="friendTabIcon" width="18" height="20"/>
         <image name="friendTabIconSelected" width="18" height="20"/>
-        <image name="friendtabProfileImg" width="59" height="58"/>
         <image name="profileCloseBtn" width="14" height="14"/>
         <image name="profileEditImg" width="19.5" height="21.5"/>
         <image name="profileStoryImg" width="20.5" height="23.5"/>
         <image name="profileTalkImg" width="20.5" height="19.5"/>
         <image name="profileUserImg" width="97" height="96"/>
+        <image name="settingIcon" width="19" height="19"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
