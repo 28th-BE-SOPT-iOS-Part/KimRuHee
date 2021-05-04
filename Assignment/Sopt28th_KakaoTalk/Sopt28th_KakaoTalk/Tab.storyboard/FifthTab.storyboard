@@ -44,7 +44,7 @@
                                         <rect key="frame" x="13" y="8" width="43" height="42"/>
                                         <state key="normal" image="settingtabProfileImg"/>
                                         <connections>
-                                            <action selector="myProfileButton:" destination="LmJ-hd-bHG" eventType="touchUpInside" id="KnH-Sc-Dz9"/>
+                                            <action selector="myProfileButtonTapped:" destination="LmJ-hd-bHG" eventType="touchUpInside" id="KnH-Sc-Dz9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -75,7 +75,7 @@
                                         <rect key="frame" x="380" y="17" width="19" height="19"/>
                                         <state key="normal" image="settingIcon"/>
                                         <connections>
-                                            <action selector="settingButton:" destination="LmJ-hd-bHG" eventType="touchUpInside" id="qyE-zE-ntt"/>
+                                            <action selector="setSettingButtonTapped" destination="LmJ-hd-bHG" eventType="touchUpInside" id="qyE-zE-ntt"/>
                                         </connections>
                                     </button>
                                 </subviews>

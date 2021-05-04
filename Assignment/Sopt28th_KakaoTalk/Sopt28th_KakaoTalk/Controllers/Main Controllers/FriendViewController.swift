@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol SelectCell {
+    func sendData(data : [String : String])
+}
+
 class FriendViewController: UIViewController {
 
     //MARK: - Properties
+    
+    var delegate : SelectCell?
     
     var friendList : [FriendListDataModel] = []
     
@@ -85,13 +91,7 @@ class FriendViewController: UIViewController {
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        
-//        header.translatesAutoresizingMaskIntoConstraints = false
-//        header.topAnchor.constraint(equalTo: tableView.topAnchor, constant: 0).isActive = true
-//        header.leftAnchor.constraint(equalTo: tableView.leftAnchor, constant: 0).isActive = true
-//        header.bottomAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 0).isActive = true
-//        header.rightAnchor.constraint(equalTo: tableView.rightAnchor, constant: 0).isActive = true
-        
+                
         profileButton.translatesAutoresizingMaskIntoConstraints = false
         profileButton.topAnchor.constraint(equalTo: header.topAnchor, constant: 5).isActive = true
         profileButton.leftAnchor.constraint(equalTo: header.leftAnchor, constant: 14).isActive = true
@@ -135,6 +135,9 @@ class FriendViewController: UIViewController {
         self.present(nextVC, animated: true, completion: nil)
     }
     
+    @IBAction func settingButtonTapped(_ sender: Any) {
+        
+    }
 }
 
 //MARK: - Extension
@@ -145,9 +148,17 @@ extension FriendViewController: UITableViewDelegate {
         return 50
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "MyProfileViewController") as? MyProfileViewController
+        else { return }
+        nextVC.modalPresentationStyle = .overFullScreen
+        
+        // if let으로 데이터를 전달해줘야 하는 부분이고
+        // 조건문 내부에서 delegate.sendData를 써서 구현해줘야 함
+        
+        self.present(nextVC, animated: true, completion: nil)
+    }
 }
 
 extension FriendViewController: UITableViewDataSource {

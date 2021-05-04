@@ -29,6 +29,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2c-L1-SDh">
                                         <rect key="frame" x="380" y="17" width="19" height="25"/>
                                         <state key="normal" image="settingIcon"/>
+                                        <connections>
+                                            <action selector="settingButtonTapped:" destination="sRG-8f-o3T" eventType="touchUpInside" id="urK-Ff-gAv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,7 +75,7 @@
                                 <rect key="frame" x="18" y="58" width="14" height="22"/>
                                 <state key="normal" image="profileCloseBtn"/>
                                 <connections>
-                                    <action selector="closeButton:" destination="u06-SM-t7h" eventType="touchUpInside" id="2c1-oL-emS"/>
+                                    <action selector="closeButtonTapped:" destination="u06-SM-t7h" eventType="touchUpInside" id="2c1-oL-emS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVH-Ql-6gs">

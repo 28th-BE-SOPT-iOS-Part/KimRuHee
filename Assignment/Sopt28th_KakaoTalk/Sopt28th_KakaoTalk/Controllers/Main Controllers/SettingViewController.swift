@@ -35,11 +35,11 @@ class SettingViewController: UIViewController {
     
     //MARK: - Helpers
     
-    @IBAction func myProfileButton(_ sender: Any) {
+    @IBAction func myProfileButtonTapped(_ sender: Any) {
         
     }
     
-    @IBAction func settingButton(_ sender: Any) {
+    @IBAction func settingButtonTapped(_ sender: Any) {
         
     }
     

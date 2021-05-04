@@ -34,7 +34,7 @@ class SignUpViewController: UIViewController {
     
     //MARK: - Helpers
     
-    @IBAction func newAccountButton(_ sender: Any) {
+    @IBAction func newAccountButtonTapped(_ sender: Any) {
         // 새 계정 만들기 버튼 누를 경우 홈화면(카톡 친구 목록 창)으로 이동
         if  pwTextfield.text != checkPwTextField.text {
             

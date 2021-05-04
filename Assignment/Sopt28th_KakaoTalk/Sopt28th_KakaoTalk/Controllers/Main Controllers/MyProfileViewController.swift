@@ -56,7 +56,7 @@ class MyProfileViewController: UIViewController {
         }
     }
     
-    @IBAction func closeButton(_ sender: Any) {
+    @IBAction func closeButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     

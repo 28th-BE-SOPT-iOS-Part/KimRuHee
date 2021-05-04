@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
 
     //MARK: - Helpers
     
-    @IBAction func loginButton(_ sender: Any) {
+    @IBAction func loginButtonTapped(_ sender: Any) {
         // 로그인 버튼 누를 경우 홈화면(카톡 친구 목록 창)으로 이동
         if emailTextField.hasText == true && pwTextField.hasText == true {
             
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    @IBAction func newAccountButton(_ sender: Any) {
+    @IBAction func newAccountButtonTapped(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "SignUpViewController")
                 as? SignUpViewController else { return }
         
