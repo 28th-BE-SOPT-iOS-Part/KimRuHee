@@ -47,7 +47,7 @@ class FriendViewController: UIViewController {
     
     let myStatusLabel : UILabel = {
         let label = UILabel()
-        label.text = "돌이킬 수 없는 실수하지 말기로 해..."
+        label.text = "맞지맞지 그 느낌적인 느낌느낌!"
         label.font = UIFont.systemFont(ofSize: 11, weight: UIFont.Weight.regular)
         label.textColor = UIColor(white: 166.0 / 255.0, alpha: 1.0)
         return label
@@ -121,15 +121,15 @@ class FriendViewController: UIViewController {
     
     func setFriendList() {
         friendList.append(contentsOf: [
-            FriendListDataModel(profileImageName: "profileImage1", name: "깨깨오예지윤", status: "돌이킬 수 없는 강 먼저 건넌 새럼.."),
+            FriendListDataModel(profileImageName: "profileImage1", name: "깨깨오예지윤", status: "찬란한 조또시도~"),
             FriendListDataModel(profileImageName: "profileImage1", name: "기버미", status: "아쥬 지갸와~"),
-            FriendListDataModel(profileImageName: "profileImage1", name: "헬로씨월드", status: "스터디 쉽지 않다 나 어트카니.."),
-            FriendListDataModel(profileImageName: "profileImage1", name: "현시기", status: "흙이 묻은 땅에서 막 파낸 감자"),
+            FriendListDataModel(profileImageName: "profileImage1", name: "헬로씨월드", status: "이 어둠을 밝혀주는~"),
+            FriendListDataModel(profileImageName: "profileImage1", name: "현시기", status: "레레레 레드코!"),
             FriendListDataModel(profileImageName: "profileImage1", name: "이창호 본부장", status: "나 장난하는 거 아닙니다."),
             FriendListDataModel(profileImageName: "profileImage1", name: "한울버린탬버린", status: "허리가 아플 땐 물리치료,, 근데 한 이틀 가도라^^"),
             FriendListDataModel(profileImageName: "profileImage1", name: "익버미", status: "구글 본부장 : 세바스찬 머시깽이 파크"),
             FriendListDataModel(profileImageName: "profileImage1", name: "제이호", status: "하이 에이치아이~"),
-            FriendListDataModel(profileImageName: "profileImage1", name: "만정", status: "인생이 쉽지 않도라...무,,아,,요,,"),
+            FriendListDataModel(profileImageName: "profileImage1", name: "만정", status: "스위치가 있다면, 다... 꺼버릴 거야..."),
             FriendListDataModel(profileImageName: "profileImage1", name: "과거의 나", status: "도망쳐 인생에서 도망쳐!!")
         ])
     }
@@ -142,6 +142,27 @@ class FriendViewController: UIViewController {
     }
     
     @IBAction func settingButtonTapped(_ sender: Any) {
+        let alert = UIAlertController()
+        let edit = UIAlertAction(title: "편집", style: .default) { (action) in
+            print("편집 메뉴 선택")
+        }
+        
+        let manage = UIAlertAction(title: "친구 관리", style: .default) { (action) in
+            print("친구 관리 메뉴 선택")
+        }
+        
+        let setting = UIAlertAction(title: "전체 설정", style: .default) { (action) in
+            print("전체 설정 메뉴 선택")
+        }
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(edit)
+        alert.addAction(manage)
+        alert.addAction(setting)
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true, completion: nil)
         
     }
 }
@@ -155,6 +176,8 @@ extension FriendViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
         
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "MyProfileViewController") as? MyProfileViewController
         else { return }
@@ -182,6 +205,7 @@ extension FriendViewController: UITableViewDataSource {
                      statusMessage: friendList[indexPath.row].status)
         return cell
     }
+    
     
     
 }
