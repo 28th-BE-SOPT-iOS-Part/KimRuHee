@@ -206,6 +206,56 @@ extension FriendViewController: UITableViewDataSource {
         return cell
     }
     
+    // 스와이핑 - 숨김 / 차단 메뉴
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let block = UIContextualAction(style: .normal, title: "차단")
+        { (UIContextualAction, UIView, success:(Bool) -> Void) in
+            success(true)
+        }
+        
+        let hide = UIContextualAction(style: .normal, title: "숨김")
+        { (UIContextualAction, UIView, success:(Bool) -> Void) in
+            success(true)
+        }
+        
+        block.backgroundColor = .red
+        hide.backgroundColor = .gray
+        
+        return UISwipeActionsConfiguration(actions: [block, hide])
+    }
     
+    // 프로필 미리보기 기능
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: nil) { () -> UIViewController? in
+            MyProfileViewController() } actionProvider: { (_: [UIMenuElement]) -> UIMenu? in
+            var children : [UIMenuElement] = []
+            
+            let btn1 = UIAction(title: "채팅하기") { (UIAction) in
+                print("채팅하기 클릭됨")
+            }
+            
+            let btn2 = UIAction(title: "보이스톡") { (UIAction) in
+                print("보이스톡 클릭됨")
+            }
+            
+            let btn3 = UIAction(title: "페이스톡") { (UIAction) in
+                print("페이스톡 클릭됨")
+            }
+            
+            let btn4 = UIAction(title: "선물하기") { (UIAction) in
+                print("선물하기 클릭됨")
+            }
+            
+            children.append(btn1)
+            children.append(btn2)
+            children.append(btn3)
+            children.append(btn4)
+            
+            return UIMenu(children: children)
+        }
+
+        
+    }
     
 }
