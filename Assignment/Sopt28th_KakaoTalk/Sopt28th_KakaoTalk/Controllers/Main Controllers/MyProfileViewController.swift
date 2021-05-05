@@ -6,18 +6,33 @@
 //
 
 import UIKit
+import SnapKit
 
 class MyProfileViewController: UIViewController {
     
     //MARK: - Properties
     
+    var imageName : String = ""
+    var name : String = ""
+    
     var viewTranslation = CGPoint(x: 0, y: 0)
     var viewVelocity = CGPoint(x: 0, y: 0)
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileNameLabel: UILabel!
     
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        profileImageView.image = UIImage(named: imageName)
+        profileNameLabel.text = name
+    
+        profileImageView.snp.makeConstraints { (make) in
+            make.width.height.equalTo(97)
+        }
+        
         modalDismiss()
     }
     

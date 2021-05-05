@@ -78,10 +78,6 @@
                                     <action selector="closeButtonTapped:" destination="u06-SM-t7h" eventType="touchUpInside" id="2c1-oL-emS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVH-Ql-6gs">
-                                <rect key="frame" x="158.5" y="597.5" width="97" height="96"/>
-                                <state key="normal" image="profileUserImg"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김솝트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sB-vs-XEN">
                                 <rect key="frame" x="183.5" y="701.5" width="47" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -172,6 +168,9 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileUserImg" translatesAutoresizingMaskIntoConstraints="NO" id="Pfp-18-G45">
+                                <rect key="frame" x="158.5" y="597.5" width="97" height="96"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ctg-Od-rqQ"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -184,16 +183,20 @@
                             <constraint firstItem="B8l-CE-rHA" firstAttribute="centerX" secondItem="ldJ-tj-ajh" secondAttribute="centerX" id="DMX-lB-dBZ"/>
                             <constraint firstItem="2sB-vs-XEN" firstAttribute="centerX" secondItem="ldJ-tj-ajh" secondAttribute="centerX" id="FH0-1v-9M6"/>
                             <constraint firstAttribute="bottom" secondItem="4WK-Qb-Uih" secondAttribute="bottom" constant="47" id="Mp1-QE-ucs"/>
-                            <constraint firstItem="2sB-vs-XEN" firstAttribute="top" secondItem="HVH-Ql-6gs" secondAttribute="bottom" constant="8" id="OS3-gn-X4I"/>
                             <constraint firstAttribute="trailing" secondItem="B8l-CE-rHA" secondAttribute="trailing" id="OYN-H7-3ZY"/>
-                            <constraint firstItem="HVH-Ql-6gs" firstAttribute="centerX" secondItem="ldJ-tj-ajh" secondAttribute="centerX" id="dON-XS-FHF"/>
                             <constraint firstItem="4WK-Qb-Uih" firstAttribute="centerX" secondItem="ldJ-tj-ajh" secondAttribute="centerX" id="hcs-Gm-etX"/>
+                            <constraint firstItem="2sB-vs-XEN" firstAttribute="top" secondItem="Pfp-18-G45" secondAttribute="bottom" constant="8" id="ln1-C3-Fw1"/>
+                            <constraint firstItem="Pfp-18-G45" firstAttribute="centerX" secondItem="ldJ-tj-ajh" secondAttribute="centerX" id="pmQ-ex-g0B"/>
                             <constraint firstItem="SvQ-9y-AQH" firstAttribute="top" secondItem="Ctg-Od-rqQ" secondAttribute="top" constant="14" id="wb0-R6-Ohd"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="LPb-qH-1Rg" appends="YES" id="1St-4C-djM"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="Pfp-18-G45" id="giQ-kR-YRP"/>
+                        <outlet property="profileNameLabel" destination="2sB-vs-XEN" id="K3I-jP-9fJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oT3-lm-RlO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="LPb-qH-1Rg"/>

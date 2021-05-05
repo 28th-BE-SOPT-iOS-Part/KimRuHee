@@ -8,15 +8,11 @@
 import UIKit
 import SnapKit
 
-protocol SelectCell {
-    func sendData(data : [String : String])
-}
-
 class FriendViewController: UIViewController {
 
     //MARK: - Properties
     
-    var delegate : SelectCell?
+    var friendTableViewCell = FriendTableViewCell()
     
     var friendList : [FriendListDataModel] = []
     
@@ -53,7 +49,6 @@ class FriendViewController: UIViewController {
         return label
     }()
     
-    // 여기 내 프로필이랑 친구 목록 구분선!! 부분
     let lineView : UIView = {
        let view = UIView()
         view.backgroundColor = UIColor(white: 247.0 / 255.0, alpha: 1.0)
@@ -118,19 +113,18 @@ class FriendViewController: UIViewController {
         }
     }
     
-    
     func setFriendList() {
         friendList.append(contentsOf: [
             FriendListDataModel(profileImageName: "profileImage1", name: "깨깨오예지윤", status: "찬란한 조또시도~"),
-            FriendListDataModel(profileImageName: "profileImage1", name: "기버미", status: "아쥬 지갸와~"),
-            FriendListDataModel(profileImageName: "profileImage1", name: "헬로씨월드", status: "이 어둠을 밝혀주는~"),
-            FriendListDataModel(profileImageName: "profileImage1", name: "현시기", status: "레레레 레드코!"),
-            FriendListDataModel(profileImageName: "profileImage1", name: "이창호 본부장", status: "나 장난하는 거 아닙니다."),
-            FriendListDataModel(profileImageName: "profileImage1", name: "한울버린탬버린", status: "허리가 아플 땐 물리치료,, 근데 한 이틀 가도라^^"),
-            FriendListDataModel(profileImageName: "profileImage1", name: "익버미", status: "구글 본부장 : 세바스찬 머시깽이 파크"),
-            FriendListDataModel(profileImageName: "profileImage1", name: "제이호", status: "하이 에이치아이~"),
-            FriendListDataModel(profileImageName: "profileImage1", name: "만정", status: "스위치가 있다면, 다... 꺼버릴 거야..."),
-            FriendListDataModel(profileImageName: "profileImage1", name: "과거의 나", status: "도망쳐 인생에서 도망쳐!!")
+            FriendListDataModel(profileImageName: "profileImage2", name: "기버미", status: "아쥬 지갸와~"),
+            FriendListDataModel(profileImageName: "profileImage3", name: "헬로씨월드", status: "이 어둠을 밝혀주는~"),
+            FriendListDataModel(profileImageName: "profileImage4", name: "현시기", status: "레레레 레드코!"),
+            FriendListDataModel(profileImageName: "profileImage5", name: "이창호 본부장", status: "나 장난하는 거 아닙니다."),
+            FriendListDataModel(profileImageName: "profileImage6", name: "한울버린탬버린", status: "허리가 아플 땐 물리치료,, 근데 한 이틀 가도라^^"),
+            FriendListDataModel(profileImageName: "profileImage7", name: "익버미", status: "구글 본부장 : 세바스찬 머시깽이 파크"),
+            FriendListDataModel(profileImageName: "profileImage8", name: "제이호", status: "하이 에이치아이~"),
+            FriendListDataModel(profileImageName: "profileImage9", name: "만정", status: "스위치가 있다면, 다... 꺼버릴 거야..."),
+            FriendListDataModel(profileImageName: "profileImage10", name: "과거의 나", status: "도망쳐 인생에서 도망쳐!!")
         ])
     }
     
@@ -138,9 +132,14 @@ class FriendViewController: UIViewController {
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "MyProfileViewController")
                 as? MyProfileViewController else { return }
         nextVC.modalPresentationStyle = .overFullScreen
+        
+        nextVC.name = myNameLabel.text ?? "루키루키마슈퍼루키루키루키"
+        nextVC.imageName = "friendtabProfileImg"
+        
         self.present(nextVC, animated: true, completion: nil)
     }
     
+    // ActionSheet 메뉴
     @IBAction func settingButtonTapped(_ sender: Any) {
         let alert = UIAlertController()
         let edit = UIAlertAction(title: "편집", style: .default) { (action) in
@@ -167,7 +166,7 @@ class FriendViewController: UIViewController {
     }
 }
 
-//MARK: - Extension
+//MARK: - UITableViewDelegate
 
 extension FriendViewController: UITableViewDelegate {
     
@@ -183,12 +182,15 @@ extension FriendViewController: UITableViewDelegate {
         else { return }
         nextVC.modalPresentationStyle = .overFullScreen
         
-        // if let으로 데이터를 전달해줘야 하는 부분이고
-        // 조건문 내부에서 delegate.sendData를 써서 구현해줘야 함
-        
+        // 셀 선택 시 데이터 전달
+        nextVC.name = friendList[indexPath.row].name
+        nextVC.imageName = friendList[indexPath.row].profileImageName
+
         self.present(nextVC, animated: true, completion: nil)
     }
 }
+
+//MARK: - UITableViewDataSource
 
 extension FriendViewController: UITableViewDataSource {
     
@@ -203,8 +205,10 @@ extension FriendViewController: UITableViewDataSource {
         cell.setData(profileImageName: friendList[indexPath.row].profileImageName,
                      name: friendList[indexPath.row].name,
                      statusMessage: friendList[indexPath.row].status)
+        
         return cell
     }
+    
     
     // 스와이핑 - 숨김 / 차단 메뉴
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -220,15 +224,24 @@ extension FriendViewController: UITableViewDataSource {
         }
         
         block.backgroundColor = .red
-        hide.backgroundColor = .gray
+        hide.backgroundColor = .lightGray
         
         return UISwipeActionsConfiguration(actions: [block, hide])
     }
     
+    
     // 프로필 미리보기 기능
     func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         return UIContextMenuConfiguration(identifier: nil) { () -> UIViewController? in
-            MyProfileViewController() } actionProvider: { (_: [UIMenuElement]) -> UIMenu? in
+            
+            let preview = self.storyboard?.instantiateViewController(withIdentifier: "MyProfileViewController") as? MyProfileViewController
+            preview?.imageName = self.friendList[indexPath.row].profileImageName
+            preview?.name = self.friendList[indexPath.row].name
+            
+            return preview
+            
+        } actionProvider: { (_: [UIMenuElement]) -> UIMenu? in
+                
             var children : [UIMenuElement] = []
             
             let btn1 = UIAction(title: "채팅하기") { (UIAction) in
@@ -254,8 +267,7 @@ extension FriendViewController: UITableViewDataSource {
             
             return UIMenu(children: children)
         }
-
-        
+  
     }
     
 }

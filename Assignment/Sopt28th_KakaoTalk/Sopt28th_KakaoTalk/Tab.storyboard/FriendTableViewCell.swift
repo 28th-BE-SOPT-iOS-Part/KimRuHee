@@ -33,10 +33,6 @@ class FriendTableViewCell: UITableViewCell {
         contentView.addSubview(nameLabel)
         contentView.addSubview(statusMessageLabel)
         
-        profileImage.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        statusMessageLabel.translatesAutoresizingMaskIntoConstraints = false
-        
         profileImage.snp.makeConstraints { (make) in
             make.top.equalTo(contentView.snp.top).offset(4)
             make.leading.equalTo(contentView.snp.leading).offset(16)
