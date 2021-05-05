@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class FriendTableViewCell: UITableViewCell {
 
@@ -24,8 +25,7 @@ class FriendTableViewCell: UITableViewCell {
         label.textColor = UIColor(white: 166.0 / 255.0, alpha: 1.0)
         return label
     }()
-    
-    
+        
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -37,16 +37,21 @@ class FriendTableViewCell: UITableViewCell {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         statusMessageLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        profileImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4).isActive = true
-        profileImage.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16).isActive = true
-        profileImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5).isActive = true
+        profileImage.snp.makeConstraints { (make) in
+            make.top.equalTo(contentView.snp.top).offset(4)
+            make.leading.equalTo(contentView.snp.leading).offset(16)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-5)
+        }
         
-        nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
-        nameLabel.leftAnchor.constraint(equalTo: profileImage.rightAnchor, constant: 11).isActive = true
+        nameLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(contentView.snp.top).offset(10)
+            make.leading.equalTo(profileImage.snp.trailing).offset(11)
+        }
         
-        statusMessageLabel.leftAnchor.constraint(equalTo: profileImage.rightAnchor, constant: 11).isActive = true
-        statusMessageLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -11).isActive = true
-        
+        statusMessageLabel.snp.makeConstraints { (make) in
+            make.leading.equalTo(profileImage.snp.trailing).offset(11)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-11)
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -64,8 +69,7 @@ class FriendTableViewCell: UITableViewCell {
         statusMessageLabel.text = statusMessage
         
     }
-    
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
     }

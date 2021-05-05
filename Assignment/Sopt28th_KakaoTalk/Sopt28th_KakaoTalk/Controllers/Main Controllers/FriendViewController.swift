@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol SelectCell {
     func sendData(data : [String : String])
@@ -86,32 +87,37 @@ class FriendViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.tableHeaderView = header
         
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: upperView.bottomAnchor, constant: 0).isActive = true
-        tableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-        tableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-                
-        profileButton.translatesAutoresizingMaskIntoConstraints = false
-        profileButton.topAnchor.constraint(equalTo: header.topAnchor, constant: 5).isActive = true
-        profileButton.leftAnchor.constraint(equalTo: header.leftAnchor, constant: 14).isActive = true
-        profileButton.bottomAnchor.constraint(equalTo: header.bottomAnchor, constant: -10).isActive = true
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(upperView.snp.bottom)
+            $0.leading.equalTo(view.snp.leading)
+            $0.bottom.equalTo(view.snp.bottom)
+            $0.trailing.equalTo(view.snp.trailing)
+        }
         
-        myNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        myNameLabel.topAnchor.constraint(equalTo: header.topAnchor, constant: 15).isActive = true
-        myNameLabel.leftAnchor.constraint(equalTo: profileButton.rightAnchor, constant: 10).isActive = true
+        profileButton.snp.makeConstraints {
+            $0.top.equalTo(header.snp.top).offset(5)
+            $0.leading.equalTo(header.snp.leading).offset(14)
+            $0.bottom.equalTo(header.snp.bottom).offset(-10)
+        }
         
-        myStatusLabel.translatesAutoresizingMaskIntoConstraints = false
-        myStatusLabel.topAnchor.constraint(equalTo: myNameLabel.bottomAnchor, constant: 7).isActive = true
-        myStatusLabel.leftAnchor.constraint(equalTo: profileButton.rightAnchor, constant: 11).isActive = true
+        myNameLabel.snp.makeConstraints {
+            $0.top.equalTo(header.snp.top).offset(15)
+            $0.leading.equalTo(profileButton.snp.trailing).offset(10)
+        }
         
-        lineView.translatesAutoresizingMaskIntoConstraints = false
-        lineView.leftAnchor.constraint(equalTo: header.leftAnchor, constant: 16).isActive = true
-        lineView.bottomAnchor.constraint(equalTo: header.bottomAnchor, constant: -1).isActive = true
-        lineView.rightAnchor.constraint(equalTo: header.rightAnchor, constant: -16).isActive = true
-        lineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        
+        myStatusLabel.snp.makeConstraints {
+            $0.top.equalTo(myNameLabel.snp.bottom).offset(7)
+            $0.leading.equalTo(profileButton.snp.trailing).offset(11)
+        }
+         
+        lineView.snp.makeConstraints {
+            $0.leading.equalTo(header.snp.leading).offset(16)
+            $0.bottom.equalTo(header.snp.bottom).offset(-1)
+            $0.trailing.equalTo(header.snp.trailing).offset(-16)
+            $0.height.equalTo(1)
+        }
     }
+    
     
     func setFriendList() {
         friendList.append(contentsOf: [
