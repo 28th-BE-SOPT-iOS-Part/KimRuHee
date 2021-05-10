@@ -226,7 +226,10 @@ extension FriendViewController: UITableViewDataSource {
         block.backgroundColor = .red
         hide.backgroundColor = .lightGray
         
-        return UISwipeActionsConfiguration(actions: [block, hide])
+        // 스와이핑이 끝까지 되는 것을 방지하기 위해서 따로 swipeActions 상수 선언하고 performsFirstActionWithFullSwipe 프로퍼티 값을 false로 줌
+        let swipeActions = UISwipeActionsConfiguration(actions: [block, hide])
+        swipeActions.performsFirstActionWithFullSwipe = false
+        return swipeActions
     }
     
     

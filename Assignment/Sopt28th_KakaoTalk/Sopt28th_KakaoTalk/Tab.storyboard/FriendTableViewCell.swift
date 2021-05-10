@@ -10,6 +10,8 @@ import SnapKit
 
 class FriendTableViewCell: UITableViewCell {
 
+    static let identifier = "FriendTableViewCell"
+    
     var profileImage = UIImageView()
     
     var nameLabel : UILabel = {
