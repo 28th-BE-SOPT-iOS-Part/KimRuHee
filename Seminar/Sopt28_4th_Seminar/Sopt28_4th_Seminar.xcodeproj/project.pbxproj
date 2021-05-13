@@ -3,29 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1EBB31264D1DAD00B04C7F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB30264D1DAD00B04C7F /* UserInfo.swift */; };
+		BB1EBB35264D932E00B04C7F /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB34264D932E00B04C7F /* NetworkResult.swift */; };
+		BB1EBB38264DA07C00B04C7F /* SampleNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB37264DA07C00B04C7F /* SampleNetworkViewController.swift */; };
+		BB1EBB3B264DA38800B04C7F /* PersonDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB3A264DA38800B04C7F /* PersonDataModel.swift */; };
+		BB1EBB40264DA72E00B04C7F /* GetPersonDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB3F264DA72E00B04C7F /* GetPersonDataService.swift */; };
 		BB70A25526413F1C00389786 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB70A25426413F1C00389786 /* AppDelegate.swift */; };
 		BB70A25726413F1C00389786 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB70A25626413F1C00389786 /* SceneDelegate.swift */; };
-		BB70A25926413F1C00389786 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB70A25826413F1C00389786 /* ViewController.swift */; };
+		BB70A25926413F1C00389786 /* EncodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB70A25826413F1C00389786 /* EncodeViewController.swift */; };
 		BB70A25C26413F1C00389786 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB70A25A26413F1C00389786 /* Main.storyboard */; };
 		BB70A25E26413F1E00389786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB70A25D26413F1E00389786 /* Assets.xcassets */; };
 		BB70A26126413F1E00389786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB70A25F26413F1E00389786 /* LaunchScreen.storyboard */; };
+		BBB8B58126491A25004FEFC9 /* DecodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB8B58026491A25004FEFC9 /* DecodeViewController.swift */; };
 		D863B1E2DBDB2F2292B38702 /* Pods_Sopt28_4th_Seminar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F994F739986B7D82590E18D /* Pods_Sopt28_4th_Seminar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F994F739986B7D82590E18D /* Pods_Sopt28_4th_Seminar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sopt28_4th_Seminar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB1EBB30264D1DAD00B04C7F /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		BB1EBB34264D932E00B04C7F /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		BB1EBB37264DA07C00B04C7F /* SampleNetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleNetworkViewController.swift; sourceTree = "<group>"; };
+		BB1EBB3A264DA38800B04C7F /* PersonDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDataModel.swift; sourceTree = "<group>"; };
+		BB1EBB3F264DA72E00B04C7F /* GetPersonDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPersonDataService.swift; sourceTree = "<group>"; };
 		BB70A25126413F1C00389786 /* Sopt28_4th_Seminar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sopt28_4th_Seminar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB70A25426413F1C00389786 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB70A25626413F1C00389786 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB70A25826413F1C00389786 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB70A25826413F1C00389786 /* EncodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeViewController.swift; sourceTree = "<group>"; };
 		BB70A25B26413F1C00389786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB70A25D26413F1E00389786 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB70A26026413F1E00389786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB70A26226413F1E00389786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBB8B58026491A25004FEFC9 /* DecodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeViewController.swift; sourceTree = "<group>"; };
 		D252F5720B452A43D4E20C60 /* Pods-Sopt28_4th_Seminar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt28_4th_Seminar.release.xcconfig"; path = "Target Support Files/Pods-Sopt28_4th_Seminar/Pods-Sopt28_4th_Seminar.release.xcconfig"; sourceTree = "<group>"; };
 		FE142689BA8ABE0DE353BE25 /* Pods-Sopt28_4th_Seminar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt28_4th_Seminar.debug.xcconfig"; path = "Target Support Files/Pods-Sopt28_4th_Seminar/Pods-Sopt28_4th_Seminar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +60,6 @@
 				FE142689BA8ABE0DE353BE25 /* Pods-Sopt28_4th_Seminar.debug.xcconfig */,
 				D252F5720B452A43D4E20C60 /* Pods-Sopt28_4th_Seminar.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -75,8 +86,14 @@
 			children = (
 				BB70A25426413F1C00389786 /* AppDelegate.swift */,
 				BB70A25626413F1C00389786 /* SceneDelegate.swift */,
-				BB70A25826413F1C00389786 /* ViewController.swift */,
+				BB1EBB30264D1DAD00B04C7F /* UserInfo.swift */,
+				BB70A25826413F1C00389786 /* EncodeViewController.swift */,
+				BBB8B58026491A25004FEFC9 /* DecodeViewController.swift */,
 				BB70A25A26413F1C00389786 /* Main.storyboard */,
+				BB1EBB34264D932E00B04C7F /* NetworkResult.swift */,
+				BB1EBB3A264DA38800B04C7F /* PersonDataModel.swift */,
+				BB1EBB3F264DA72E00B04C7F /* GetPersonDataService.swift */,
+				BB1EBB37264DA07C00B04C7F /* SampleNetworkViewController.swift */,
 				BB70A25D26413F1E00389786 /* Assets.xcassets */,
 				BB70A25F26413F1E00389786 /* LaunchScreen.storyboard */,
 				BB70A26226413F1E00389786 /* Info.plist */,
@@ -206,9 +223,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB70A25926413F1C00389786 /* ViewController.swift in Sources */,
+				BB1EBB3B264DA38800B04C7F /* PersonDataModel.swift in Sources */,
+				BBB8B58126491A25004FEFC9 /* DecodeViewController.swift in Sources */,
+				BB70A25926413F1C00389786 /* EncodeViewController.swift in Sources */,
 				BB70A25526413F1C00389786 /* AppDelegate.swift in Sources */,
+				BB1EBB38264DA07C00B04C7F /* SampleNetworkViewController.swift in Sources */,
+				BB1EBB35264D932E00B04C7F /* NetworkResult.swift in Sources */,
+				BB1EBB31264D1DAD00B04C7F /* UserInfo.swift in Sources */,
 				BB70A25726413F1C00389786 /* SceneDelegate.swift in Sources */,
+				BB1EBB40264DA72E00B04C7F /* GetPersonDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
