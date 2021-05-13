@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -60,7 +60,7 @@
 		BB7776AB261AD86E0087AB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7776B3261AE1920087AB5F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BB7776B7261AE4D00087AB5F /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
-		BBFC28C92637D8E000B4570E /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendTableViewCell.swift; path = Sopt28th_KakaoTalk/Tab.storyboard/FriendTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		BBFC28C92637D8E000B4570E /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendTableViewCell.swift; path = Sopt28th_KakaoTalk/Cells/FriendTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		BECAD8796AB6164726018B98 /* Pods-Sopt28th_1st_Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt28th_1st_Assignment.release.xcconfig"; path = "Target Support Files/Pods-Sopt28th_1st_Assignment/Pods-Sopt28th_1st_Assignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB1EBB43264DF05100B04C7F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BB70A212263F3BC000389786 /* SettingCollectionViewCell.swift */,
+				BBFC28C92637D8E000B4570E /* FriendTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BB1EBB44264DF07A00B04C7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BB35E8702626E41C0086DE5D /* Tab.storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,13 +104,13 @@
 			path = Tab.storyboard;
 			sourceTree = "<group>";
 		};
-		BB35E8872626E9D20086DE5D /* Controllers */ = {
+		BB35E8872626E9D20086DE5D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				BB35E89C2626EC8A0086DE5D /* Login Controllers */,
 				BB35E89D2626EC9E0086DE5D /* Main Controllers */,
 			);
-			path = Controllers;
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		BB35E89C2626EC8A0086DE5D /* Login Controllers */ = {
@@ -112,13 +128,11 @@
 			children = (
 				BB341EC82628973E00BF274D /* MainTabBarController.swift */,
 				BB35E88F2626EAE60086DE5D /* FriendViewController.swift */,
-				BBFC28C92637D8E000B4570E /* FriendTableViewCell.swift */,
 				BB35E89F2626ECE00086DE5D /* MyProfileViewController.swift */,
 				BB35E88B2626EA310086DE5D /* ChatViewController.swift */,
 				BB35E8922626EAF00086DE5D /* TagViewController.swift */,
 				BB35E8952626EB0E0086DE5D /* ShoppingViewController.swift */,
 				BB35E8982626EB1A0086DE5D /* SettingViewController.swift */,
-				BB70A212263F3BC000389786 /* SettingCollectionViewCell.swift */,
 			);
 			path = "Main Controllers";
 			sourceTree = "<group>";
@@ -149,7 +163,9 @@
 				BB5AC290263F023300C969C7 /* FriendListDataModel.swift */,
 				BB7776A3261AD86A0087AB5F /* Main.storyboard */,
 				BB35E8702626E41C0086DE5D /* Tab.storyboard */,
-				BB35E8872626E9D20086DE5D /* Controllers */,
+				BB1EBB44264DF07A00B04C7F /* Models */,
+				BB1EBB43264DF05100B04C7F /* Cells */,
+				BB35E8872626E9D20086DE5D /* View Controllers */,
 				BB7776A6261AD86E0087AB5F /* Assets.xcassets */,
 				BB7776A8261AD86E0087AB5F /* LaunchScreen.storyboard */,
 				BB7776AB261AD86E0087AB5F /* Info.plist */,
@@ -171,7 +187,6 @@
 				1C134495E25CFAD5F655C8A5 /* Pods-Sopt28th_1st_Assignment.debug.xcconfig */,
 				BECAD8796AB6164726018B98 /* Pods-Sopt28th_1st_Assignment.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
