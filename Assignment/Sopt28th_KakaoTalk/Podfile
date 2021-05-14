@@ -7,5 +7,5 @@ target 'Sopt28th_1st_Assignment' do
 
   # Pods for Sopt28th_1st_Assignment
   pod 'SnapKit', '~> 5.0.0’
-
+  pod 'Alamofire', '~> 5.1'
 end

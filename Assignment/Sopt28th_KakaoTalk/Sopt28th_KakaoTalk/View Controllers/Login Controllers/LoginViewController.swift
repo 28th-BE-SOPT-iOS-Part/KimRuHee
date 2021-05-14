@@ -36,6 +36,12 @@ class LoginViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let nextVC = storyboard.instantiateViewController(identifier: "MainTabBarController")
                     as? MainTabBarController else { return }
+            
+            self.makeRequestAlert(title: "알림",
+                                  message: "로그인을 하시겠습니까?",
+                                  okAction: { _ in
+                                    self.loginAction()
+                                  })
 
             self.navigationController?.pushViewController(nextVC, animated: true)
             
@@ -49,6 +55,41 @@ class LoginViewController: UIViewController {
                 as? SignUpViewController else { return }
         
         self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func loginAction() {
+        
+        LoginService.shared.login(email: self.emailTextField.text!, password: self.pwTextField.text!) { result in
+            
+            switch result {
+            
+            case .success(let message):
+                
+                if let message = message as? String {
+                    
+                    self.makeAlert(title: "알림", message: message, okAction: { _ in
+                        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "MainTabBarController") as? MainTabBarController
+                        else { return }
+                    
+                        nextVC.navigationController?.pushViewController(nextVC, animated: true)
+                        
+                    }, completion: nil)
+
+                }
+                
+            case .requestErr(let message):
+                
+                if let message = message as? String {
+                    
+                    self.makeAlert(title: "알림", message: message)
+                    
+                }
+                
+            default :
+                print("ERROR")
+                
+            }
+        }
     }
     
 }

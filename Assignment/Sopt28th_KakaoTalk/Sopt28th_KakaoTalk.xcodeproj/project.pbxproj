@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		600CAFF04443741C4911BA92 /* Pods_Sopt28th_1st_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64625617C97707D1A118BC00 /* Pods_Sopt28th_1st_Assignment.framework */; };
+		BB1EBB47264DF19A00B04C7F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB46264DF19A00B04C7F /* APIConstants.swift */; };
+		BB1EBB4A264DFAFF00B04C7F /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB49264DFAFF00B04C7F /* NetworkResult.swift */; };
+		BB1EBB4F264DFB7500B04C7F /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB4E264DFB7500B04C7F /* LoginDataModel.swift */; };
+		BB1EBB56264E02EC00B04C7F /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB55264E02EB00B04C7F /* LoginService.swift */; };
+		BB1EBB62264E0B0600B04C7F /* UIViewController + makeAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB61264E0B0600B04C7F /* UIViewController + makeAlerts.swift */; };
+		BB1EBB66264E135200B04C7F /* SignupDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB65264E135200B04C7F /* SignupDataModel.swift */; };
+		BB1EBB6B264E14C200B04C7F /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB6A264E14C200B04C7F /* SignupService.swift */; };
 		BB341EC92628973E00BF274D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB341EC82628973E00BF274D /* MainTabBarController.swift */; };
 		BB35E8792626E8790086DE5D /* FirstTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB35E8782626E8790086DE5D /* FirstTab.storyboard */; };
 		BB35E87C2626E8810086DE5D /* SecondTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB35E87B2626E8810086DE5D /* SecondTab.storyboard */; };
@@ -36,6 +43,13 @@
 /* Begin PBXFileReference section */
 		1C134495E25CFAD5F655C8A5 /* Pods-Sopt28th_1st_Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt28th_1st_Assignment.debug.xcconfig"; path = "Target Support Files/Pods-Sopt28th_1st_Assignment/Pods-Sopt28th_1st_Assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		64625617C97707D1A118BC00 /* Pods_Sopt28th_1st_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sopt28th_1st_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB1EBB46264DF19A00B04C7F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		BB1EBB49264DFAFF00B04C7F /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		BB1EBB4E264DFB7500B04C7F /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
+		BB1EBB55264E02EB00B04C7F /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		BB1EBB61264E0B0600B04C7F /* UIViewController + makeAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + makeAlerts.swift"; sourceTree = "<group>"; };
+		BB1EBB65264E135200B04C7F /* SignupDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDataModel.swift; sourceTree = "<group>"; };
+		BB1EBB6A264E14C200B04C7F /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
 		BB341EC82628973E00BF274D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		BB35E8782626E8790086DE5D /* FirstTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstTab.storyboard; sourceTree = "<group>"; };
 		BB35E87B2626E8810086DE5D /* SecondTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondTab.storyboard; sourceTree = "<group>"; };
@@ -88,8 +102,22 @@
 		BB1EBB44264DF07A00B04C7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BB1EBB46264DF19A00B04C7F /* APIConstants.swift */,
+				BB1EBB49264DFAFF00B04C7F /* NetworkResult.swift */,
+				BB1EBB4E264DFB7500B04C7F /* LoginDataModel.swift */,
+				BB1EBB65264E135200B04C7F /* SignupDataModel.swift */,
+				BB1EBB55264E02EB00B04C7F /* LoginService.swift */,
+				BB1EBB6A264E14C200B04C7F /* SignupService.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BB1EBB5F264E097E00B04C7F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB1EBB61264E0B0600B04C7F /* UIViewController + makeAlerts.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BB35E8702626E41C0086DE5D /* Tab.storyboard */ = {
@@ -166,6 +194,7 @@
 				BB1EBB44264DF07A00B04C7F /* Models */,
 				BB1EBB43264DF05100B04C7F /* Cells */,
 				BB35E8872626E9D20086DE5D /* View Controllers */,
+				BB1EBB5F264E097E00B04C7F /* Extensions */,
 				BB7776A6261AD86E0087AB5F /* Assets.xcassets */,
 				BB7776A8261AD86E0087AB5F /* LaunchScreen.storyboard */,
 				BB7776AB261AD86E0087AB5F /* Info.plist */,
@@ -309,20 +338,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB1EBB56264E02EC00B04C7F /* LoginService.swift in Sources */,
 				BB7776A2261AD86A0087AB5F /* LoginViewController.swift in Sources */,
+				BB1EBB62264E0B0600B04C7F /* UIViewController + makeAlerts.swift in Sources */,
 				BB35E8962626EB0E0086DE5D /* ShoppingViewController.swift in Sources */,
 				BB341EC92628973E00BF274D /* MainTabBarController.swift in Sources */,
 				BB77769E261AD86A0087AB5F /* AppDelegate.swift in Sources */,
+				BB1EBB47264DF19A00B04C7F /* APIConstants.swift in Sources */,
 				BB7776B4261AE1920087AB5F /* SignUpViewController.swift in Sources */,
 				BB35E8A02626ECE00086DE5D /* MyProfileViewController.swift in Sources */,
+				BB1EBB4F264DFB7500B04C7F /* LoginDataModel.swift in Sources */,
 				BB35E8902626EAE60086DE5D /* FriendViewController.swift in Sources */,
 				BBFC28CA2637D8E000B4570E /* FriendTableViewCell.swift in Sources */,
 				BB35E8992626EB1A0086DE5D /* SettingViewController.swift in Sources */,
+				BB1EBB66264E135200B04C7F /* SignupDataModel.swift in Sources */,
 				BB35E88C2626EA310086DE5D /* ChatViewController.swift in Sources */,
+				BB1EBB6B264E14C200B04C7F /* SignupService.swift in Sources */,
 				BB70A213263F3BC000389786 /* SettingCollectionViewCell.swift in Sources */,
 				BB35E8932626EAF00086DE5D /* TagViewController.swift in Sources */,
 				BB7776B8261AE4D00087AB5F /* CompleteViewController.swift in Sources */,
 				BB7776A0261AD86A0087AB5F /* SceneDelegate.swift in Sources */,
+				BB1EBB4A264DFAFF00B04C7F /* NetworkResult.swift in Sources */,
 				BB5AC291263F023300C969C7 /* FriendListDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
