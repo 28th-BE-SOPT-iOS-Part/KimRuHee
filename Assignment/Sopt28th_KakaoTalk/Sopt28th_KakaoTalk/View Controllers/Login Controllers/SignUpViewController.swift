@@ -53,17 +53,15 @@ class SignUpViewController: UIViewController {
             pwView.backgroundColor = .systemGray4
             checkPwView.backgroundColor = .systemGray4
             
-            // 탭바 컨트롤러 코드 구현한 부분
-            guard let first = storyboard?.instantiateViewController(withIdentifier: "FriendViewController") as? FriendViewController else { return }
-            guard let second = storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as? ChatViewController else { return }
-            guard let third = storyboard?.instantiateViewController(withIdentifier: "TagViewController") as? TagViewController else { return }
-            guard let fourth = storyboard?.instantiateViewController(withIdentifier: "ShoppingViewController") as? ShoppingViewController  else { return }
-            guard let fifth = storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as? SettingViewController else { return }
-
-            let tb = UITabBarController()
-            tb.tabBar.tintColor = .black // 선택 시 검정색
-            tb.setViewControllers([first, second, third, fourth, fifth], animated: true)
-            self.navigationController?.pushViewController(tb, animated: true)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let nextVC = storyboard.instantiateViewController(identifier: "MainTabBarController") as? MainTabBarController
+            else { return }
+            
+            nextVC.modalPresentationStyle = .overFullScreen
+            self.navigationController?.pushViewController(nextVC, animated: true)
+            
+           
             
         } else {
             return
