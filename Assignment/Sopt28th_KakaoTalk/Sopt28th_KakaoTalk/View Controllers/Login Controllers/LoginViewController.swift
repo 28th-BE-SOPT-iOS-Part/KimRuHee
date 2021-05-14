@@ -68,10 +68,11 @@ class LoginViewController: UIViewController {
                 if let message = message as? String {
                     
                     self.makeAlert(title: "알림", message: message, okAction: { _ in
-                        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "MainTabBarController") as? MainTabBarController
+                        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "FriendViewController") as? FriendViewController
                         else { return }
                     
-                        nextVC.navigationController?.pushViewController(nextVC, animated: true)
+                        nextVC.modalPresentationStyle = .overFullScreen
+                        self.navigationController?.pushViewController(nextVC, animated: true)
                         
                     }, completion: nil)
 
