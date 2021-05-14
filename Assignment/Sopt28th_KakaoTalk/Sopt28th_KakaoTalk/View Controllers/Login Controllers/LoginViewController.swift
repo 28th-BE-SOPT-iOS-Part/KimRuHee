@@ -79,9 +79,8 @@ class LoginViewController: UIViewController {
                 }
                 
             case .requestErr(let message):
-                
+
                 if let message = message as? String {
-                    
                     self.makeAlert(title: "알림", message: message)
                     
                 }

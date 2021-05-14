@@ -53,15 +53,39 @@ class SignUpViewController: UIViewController {
             pwView.backgroundColor = .systemGray4
             checkPwView.backgroundColor = .systemGray4
             
+            SignupService.shared.signup(email: self.emailTextField.text!, password: self.pwTextfield.text!, passwordcheck: self.checkPwTextField.text!) { result in
+                
+                switch result {
+                
+                case .success(let message):
+                    
+                    if let message = message as? String {
+                        
+                        self.makeAlert(title: "알림", message: message, okAction: { _ in
+                            
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            guard let nextVC = storyboard.instantiateViewController(identifier: "FriendViewController") as? FriendViewController
+                            else { return }
+                            
+                            nextVC.modalPresentationStyle = .overFullScreen
+                            self.navigationController?.pushViewController(nextVC, animated: true)
+                            
+                        }, completion: nil)
+                    }
+                    
+                case .requestErr(let message):
+                    if let message = message as? String {
+                        self.makeAlert(title: "알림", message: message)
+                    }
+                    
+                default :
+                    print("끝")
+                }
+                
+               
+            }
             
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            guard let nextVC = storyboard.instantiateViewController(identifier: "MainTabBarController") as? MainTabBarController
-            else { return }
-            
-            nextVC.modalPresentationStyle = .overFullScreen
-            self.navigationController?.pushViewController(nextVC, animated: true)
-            
-           
+
             
         } else {
             return

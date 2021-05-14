@@ -14,8 +14,8 @@ struct SignupService {
     
     private func makeParameter(email : String, password : String) -> Parameters {
         
-        return ["email" : "test1",
-                "password" : "1111",
+        return ["email" : email,
+                "password" : password,
                 "sex" : "0",
                 "nickname" : "sopt_test",
                 "phone" : "010-1010-2020",
@@ -25,6 +25,7 @@ struct SignupService {
     
     func signup(email : String,
                password : String,
+               passwordcheck : String,
                completion : @escaping ((NetworkResult<Any>) -> Void)) {
         
         // 필요한 헤더를 Key - Value 형태로 작성
@@ -33,7 +34,7 @@ struct SignupService {
         
         // APIConstants의 loginURL을 가지고, POST 방식을 통해, JSONEncoding 인코딩 방식으로, 헤더 정보와 함께
         // Request를 보내기 위한 정보를 묶어서 dataRequest에 저장해둡니다.
-        let dataRequest = AF.request(APIConstants.loginURL,
+        let dataRequest = AF.request(APIConstants.signupURL,
                                      method: .post,
                                      parameters: makeParameter(email: email, password: password),
                                      encoding: JSONEncoding.default,
@@ -76,7 +77,7 @@ struct SignupService {
         
         let decoder = JSONDecoder()
         
-        guard let decodedData = try? decoder.decode(LoginDataModel.self, from: data) else { return .pathErr }
+        guard let decodedData = try? decoder.decode(SignupDataModel.self, from: data) else { return .pathErr }
         
         switch statusCode {
         
