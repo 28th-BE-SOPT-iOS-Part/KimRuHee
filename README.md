@@ -11,7 +11,7 @@
 | 1주차 | iOS기초, H.I.G를 통한 컴포넌트의 이해, View 화면 전환 | [🙆‍♀️](./Assignment/) | [🗳](./README/1week_README.md) |
 | 2주차 | Autolayout을 통한 기초 UI 구성, Scroll View의 이해 | [🙆‍♀️](./Assignment) | [🗳](./README/2week_README.md) |
 | 3주차 | TableView, CollectionView, 데이터 전달 방식의 이해 | [🙆‍♀️](./Assignment) | [🗳](./README/3week_README.md) |
-| 4주차 | Cocoapod & Networking + 솝커톤 전 보충 세미나 | - | - |
+| 4주차 | Cocoapod & Networking + 솝커톤 전 보충 세미나 | [🙆‍♀️](./Assignment) | - |
 | 5주차 | 디자인 합동 세미나 | - | - |
 | 6주차 | 서버 합동 세미나 + 솝커톤 | - | - |
 | 7주차 | 클론 코딩을 통한 실전 UI 구성, Animation, Networking 보충 | - | - |
