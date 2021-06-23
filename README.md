@@ -13,6 +13,6 @@
 | 3주차 | TableView, CollectionView, 데이터 전달 방식의 이해 | [🙆‍♀️](./Assignment) | [🗳](./README/3week_README.md) |
 | 4주차 | Cocoapod & Networking + 솝커톤 전 보충 세미나 | [🙆‍♀️](./Assignment) | - |
 | 5주차 | 디자인 합동 세미나 | [🙆‍♀️](https://github.com/SOPT28thDesignSeminar7/Millie_iOS) | [🗳](./README/45week_README.md) |
-| 6주차 | 서버 합동 세미나 + 솝커톤 | [🙆‍♀️](https://github.com/SOPT28thDesignSeminar7/Millie_iOS) | [🗳](./README/45week_README.md) |
+| 6주차 | 서버 합동 세미나 + 솝커톤 | [🙆‍♀️](https://github.com/SOPT28thDesignSeminar7/Millie_iOS)  [🙆‍♀️](https://github.com/SOPT28th-SOPKATHON-Kick/Kick_iOS) | [🗳](./README/45week_README.md) |
 | 7주차 | 클론 코딩을 통한 실전 UI 구성, Animation, Networking 보충 | - | - |
 | 8주차 | 기획 경선 + 앱잼 전 보충 세미나 + 앱스토어 배포 가이드 | - | - |
