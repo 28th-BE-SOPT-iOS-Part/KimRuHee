@@ -12,6 +12,8 @@ class FriendViewController: UIViewController {
 
     //MARK: - Properties
     
+    var selectedIndex: Int = 0
+        
     var friendTableViewCell = FriendTableViewCell()
     
     var friendList : [FriendListDataModel] = []
@@ -130,7 +132,8 @@ class FriendViewController: UIViewController {
     
     @objc func profileButtonTapped(_ sender: UIButton!) {
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "MyProfileViewController")
-                as? MyProfileViewController else { return }
+                as? MyProfileViewController
+        else { return }
         nextVC.modalPresentationStyle = .overFullScreen
         
         nextVC.name = myNameLabel.text ?? "루키루키마슈퍼루키루키루키"
@@ -202,6 +205,9 @@ extension FriendViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendTableViewCell", for: indexPath) as? FriendTableViewCell
         else { return UITableViewCell() }
         
+        cell.index = indexPath.row
+        cell.mydelegate = self
+        
         cell.setData(profileImageName: friendList[indexPath.row].profileImageName,
                      name: friendList[indexPath.row].name,
                      statusMessage: friendList[indexPath.row].status)
@@ -246,7 +252,7 @@ extension FriendViewController: UITableViewDataSource {
         } actionProvider: { (_: [UIMenuElement]) -> UIMenu? in
                 
             var children : [UIMenuElement] = []
-            
+
             let btn1 = UIAction(title: "채팅하기") { (UIAction) in
                 print("채팅하기 클릭됨")
             }
@@ -270,7 +276,16 @@ extension FriendViewController: UITableViewDataSource {
             
             return UIMenu(children: children)
         }
-  
     }
-    
+}
+
+// MARK: - Delegate Method
+extension FriendViewController: MyCustomDelegate {
+    func clickCustomButton(index: Int) {
+        let cellName = friendList[index].name
+        
+        let nextVC = GiftViewController()
+        nextVC.text = cellName + "한테 선물하기"
+        present(nextVC, animated: true)
+    }
 }

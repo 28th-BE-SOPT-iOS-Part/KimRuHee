@@ -8,10 +8,17 @@
 import UIKit
 import SnapKit
 
-class FriendTableViewCell: UITableViewCell {
+protocol MyCustomDelegate {
+    func clickCustomButton(index: Int)
+}
 
+class FriendTableViewCell: UITableViewCell {
     static let identifier = "FriendTableViewCell"
     
+    // MARK: - Properties
+    var index: Int = 0
+    var mydelegate: MyCustomDelegate?
+
     var profileImage = UIImageView()
     
     var nameLabel : UILabel = {
@@ -27,6 +34,13 @@ class FriendTableViewCell: UITableViewCell {
         label.textColor = UIColor(white: 166.0 / 255.0, alpha: 1.0)
         return label
     }()
+    
+    var customButton : UIButton = {
+        let btn = UIButton()
+        btn.setImage(UIImage(named: "shopTabIcon"), for: .normal)
+        btn.tintColor = .black
+        return btn
+    }()
         
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -34,6 +48,7 @@ class FriendTableViewCell: UITableViewCell {
         contentView.addSubview(profileImage)
         contentView.addSubview(nameLabel)
         contentView.addSubview(statusMessageLabel)
+        contentView.addSubview(customButton)
         
         profileImage.snp.makeConstraints { (make) in
             make.top.equalTo(contentView.snp.top).offset(4)
@@ -50,6 +65,14 @@ class FriendTableViewCell: UITableViewCell {
             make.leading.equalTo(profileImage.snp.trailing).offset(11)
             make.bottom.equalTo(contentView.snp.bottom).offset(-11)
         }
+        
+        customButton.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().inset(20)
+            make.centerY.equalToSuperview()
+        }
+        
+        self.customButton.addTarget(self, action: #selector(touchupCustomButton(_:)), for: .touchUpInside)
+
     }
     
     required init?(coder: NSCoder) {
@@ -75,6 +98,9 @@ class FriendTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
     
+    // MARK: - @objc
+    @objc func touchupCustomButton(_ sender: UIButton) {
+        mydelegate?.clickCustomButton(index: index)
+    }
 }

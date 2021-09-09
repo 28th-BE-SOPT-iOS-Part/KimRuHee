@@ -8,10 +8,12 @@
 import UIKit
 import SnapKit
 
+
+
 class MyProfileViewController: UIViewController {
     
     //MARK: - Properties
-    
+        
     var imageName : String = ""
     var name : String = ""
     
@@ -32,7 +34,7 @@ class MyProfileViewController: UIViewController {
         profileImageView.snp.makeConstraints { (make) in
             make.width.height.equalTo(97)
         }
-        
+
         modalDismiss()
     }
     
@@ -74,5 +76,5 @@ class MyProfileViewController: UIViewController {
     @IBAction func closeButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
 }
+

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B8665C126E9B1C100125A11 /* GiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8665C026E9B1C100125A11 /* GiftViewController.swift */; };
 		600CAFF04443741C4911BA92 /* Pods_Sopt28th_1st_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64625617C97707D1A118BC00 /* Pods_Sopt28th_1st_Assignment.framework */; };
 		BB1EBB47264DF19A00B04C7F /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB46264DF19A00B04C7F /* APIConstants.swift */; };
 		BB1EBB4A264DFAFF00B04C7F /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1EBB49264DFAFF00B04C7F /* NetworkResult.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		1C134495E25CFAD5F655C8A5 /* Pods-Sopt28th_1st_Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sopt28th_1st_Assignment.debug.xcconfig"; path = "Target Support Files/Pods-Sopt28th_1st_Assignment/Pods-Sopt28th_1st_Assignment.debug.xcconfig"; sourceTree = "<group>"; };
+		5B8665C026E9B1C100125A11 /* GiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftViewController.swift; sourceTree = "<group>"; };
 		64625617C97707D1A118BC00 /* Pods_Sopt28th_1st_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sopt28th_1st_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB1EBB46264DF19A00B04C7F /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		BB1EBB49264DFAFF00B04C7F /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				BB35E8922626EAF00086DE5D /* TagViewController.swift */,
 				BB35E8952626EB0E0086DE5D /* ShoppingViewController.swift */,
 				BB35E8982626EB1A0086DE5D /* SettingViewController.swift */,
+				5B8665C026E9B1C100125A11 /* GiftViewController.swift */,
 			);
 			path = "Main Controllers";
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				BB1EBB56264E02EC00B04C7F /* LoginService.swift in Sources */,
 				BB7776A2261AD86A0087AB5F /* LoginViewController.swift in Sources */,
 				BB1EBB62264E0B0600B04C7F /* UIViewController + makeAlerts.swift in Sources */,
+				5B8665C126E9B1C100125A11 /* GiftViewController.swift in Sources */,
 				BB35E8962626EB0E0086DE5D /* ShoppingViewController.swift in Sources */,
 				BB341EC92628973E00BF274D /* MainTabBarController.swift in Sources */,
 				BB77769E261AD86A0087AB5F /* AppDelegate.swift in Sources */,
